@@ -1,20 +1,21 @@
-function  task_1() {
-    var str = 'Привет, Мир!';
-    alert(str);
+function task_1() {
+    var hour = 60*60,
+        day = hour * 24,
+        month = day * 30;
+    alert('Number of seconds in one hour : ' + hour);
+    alert('Number of seconds in one day : ' + day);
+    alert('Number of seconds in one month : ' + month);
 }
 
-function  task_2() {
-    var str1 = 'Привет, ',
-        str2 = 'Мир!';
-    alert(str1 + str2)
+function task_2() {
+    var date = new Date(),
+        hours = date.getHours(),
+        minutes = date.getMinutes(),
+        seconds = date.getSeconds();
+    alert(hours + ':' + minutes + ':' + seconds);
 }
 
-function  task_3() {
-    var name = 'Богдан';
-    alert('Привет, ' + name + '!')
-}
-
-function  task_4() {
-    var age = 21;
-    alert('Мне ' + age + ' год!');
+function task_3() {
+    var number = 12;
+    alert(Math.pow(number, 2));
 }
