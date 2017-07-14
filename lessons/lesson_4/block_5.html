@@ -18,11 +18,52 @@
             </li>
             <li>
                 <p>
-                    В переменной day лежит какое-то число из интервала от 1 до 31. Определите в какую декаду месяца попадает это число (в первую, вторую или третью).
+                    В переменной month лежит какое-то число из интервала от 1 до 12. Определите в какую пору года попадает этот месяц (зима, лето, весна, осень).
                 </p>
                 <form>
-                    <input type='text' id ='month' title='day'>
+                    <input type='text' id ='month' title='month'>
                     <button onclick="task_2(document.getElementById('month').value)">Отправить</button>
+                </form>
+            </li>
+            <li>
+                <p>
+                    Дана строка, состоящая из символов, например, 'abcde'. Проверьте, что первым символом этой строки является буква 'a'. Если это так - выведите 'да',
+                    в противном случае выведите 'нет'.
+                </p>
+                <form>
+                    <input type='text' id ='string' title='string' value='abcde'>
+                    <button onclick="task_3(document.getElementById('string').value)">Первая буква строки 'a'?</button>
+                </form>
+            </li>
+            <li>
+                <p>
+                    Дана строка с цифрами, например, '12345'. Проверьте, что первым символом этой строки является цифра 1, 2 или 3. Если это так - выведите 'да',
+                    в противном случае выведите 'нет'.
+                </p>
+                <form>
+                    <input type='text' id ='string2' title='string' value='12345'>
+                    <button onclick="task_4(document.getElementById('string2').value, 1)">Первая 1?</button>
+                    <button onclick="task_4(document.getElementById('string2').value, 2)">Первая 2?</button>
+                    <button onclick="task_4(document.getElementById('string2').value, 3)">Первая 3?</button>
+                </form>
+            </li>
+            <li>
+                <p>
+
+                    Дана строка из 3-х цифр. Найдите сумму этих цифр. То есть сложите как числа первый символ строки, второй и третий.
+                </p>
+                <form>
+                    <input type='text' id ='string3' title='string' value='123'>
+                    <button onclick="task_5(document.getElementById('string3').value)">Сумма</button>
+                </form>
+            </li>
+            <li>
+                <p>
+                    Дана строка из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется сумме вторых трех цифр. Если это так - выведите 'да', в противном случае выведите 'нет'.
+                </p>
+                <form>
+                    <input type='text' id ='string4' title='string' value='123456'>
+                    <button onclick="task_6(document.getElementById('string4').value)">Проверить</button>
                 </form>
             </li>
         </ol>
