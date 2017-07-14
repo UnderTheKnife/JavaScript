@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS-block.6</title>
+        <script src="js/block_6.js"></script>
+    </head>
+    <body>
+        <ol>
+            <li>
+                <p>
+                    Даны переменные a и b. Найдите найдите модуль разности a и b. Проверьте работу скрипта самостоятельно для различных a и b.
+                </p>
+                <form>
+                    <input id="a1" type="text" title="a">
+                    <input id="b1" type="text" title="b">
+                    <input id="button1" type="button" onclick="task_1(document.getElementById('a1').value, document.getElementById('b1').value)" value="Показать результат">
+                </form>
+                <div id="result1"></div>
+            </li>
+            <li>
+                <p>
+                    Даны переменные a и b. Отнимите от a переменную b и результат присвойте переменной c. Сделайте так, чтобы в любом случае в
+                    переменную c записалось положительное значение. Проверьте работу скрипта при a и b, равных соответственно 3 и 5, 6 и 1.
+                </p>
+                <form>
+                    <input id="a2" type="text" title="a">
+                    <input id="b2" type="text" title="b">
+                    <input id="button2" type="button" onclick="task_2(document.getElementById('a2').value, document.getElementById('b2').value)" value="Показать результат">
+                </form>
+                <div id="result2"></div>
+            </li>
+        </ol>
+    </body>
+</html>
