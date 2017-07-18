@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS-lesson 8</title>
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <ol>
+            <li>
+                <p>
+                    Сделайте функцию, которая параметрами принимает 2 числа. Если эти числа равны - пусть функция вернет true, а если не равны - false.
+                </p>
+                <form onsubmit="return false;">
+                    <input id="a1" type="text" title="number">
+                    <input id="b1" type="text" title="number">
+                    <input type="submit" onclick="task_1(document.getElementById('a1').value, document.getElementById('b1').value)" value="Показать результат">
+                </form>
+                <div id="result1"></div>
+            </li>
+            <li>
+                <p>
+                    Сделайте функцию, которая параметрами принимает 2 числа. Если их сумма больше 10 - пусть функция вернет true, а если нет - false.
+                </p>
+                <form onsubmit="return false;">
+                    <input id="a2" type="text" title="number">
+                    <input id="b2" type="text" title="number">
+                    <input type="submit" onclick="task_2(document.getElementById('a2').value, document.getElementById('b2').value)" value="Показать результат">
+                </form>
+                <div id="result2"></div>
+            </li>
+            <li>
+                <p>
+                    Сделайте функцию, которая параметром принимает число и проверяет - отрицательное оно или нет. Если отрицательное - пусть функция вернет true, а если нет - false.
+                </p>
+                <form onsubmit="return false;">
+                    <input id="a3" type="text" title="number">
+                    <input type="submit" onclick="task_3(document.getElementById('a3').value)" value="Показать результат">
+                </form>
+                <div id="result3"></div>
+            </li>
+        </ol>
+    </body>
+</html>
