@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS-lesson 14</title>
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <ol>
+            <li>
+                <p>
+                    Заполните массив следующим образом: в первый элемент запишите 'x', во второй 'xx', в третий 'xxx' и так далее.
+                </p>
+                <button id="button1" onclick="task_1()">Показать результат</button>
+                <div id="result1" style="display: none"></div>
+            </li>
+            <li>
+                <p>
+                    Заполните массив следующим образом: в первый элемент запишите '1', во второй '22', в третий '333' и так далее.
+                </p>
+                <button id="button2" onclick="task_2()">Показать результат</button>
+                <div id="result2" style="display: none"></div>
+            </li>
+            <li>
+                <p>
+                    Сделайте функцию arrayFill, которая будет заполнять массив заданными значениями. Первым параметром функция принимает значение,
+                    которым заполнять массив, а вторым - сколько элементов должно быть в массиве. Пример: arrayFill('x', 5) сделает массив ['x', 'x', 'x', 'x', 'x'].
+                </p>
+                <form onsubmit="return false;">
+                    <input id="value3" type="text" placeholder="Значение">
+                    <input id="count3" type="text" placeholder="Количество">
+                    <input type="submit" onclick="task_3(document.getElementById('value3').value, document.getElementById('count3').value)" value="Показать результат">
+                </form>
+                <div id="result3"></div>
+            </li>
+            <li>
+                <p>
+                    Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
+                </p>
+                <button id="button4" onclick="task_4()">Показать результат</button>
+                <div id="result4" style="display: none"></div>
+            </li>
+            <li>
+                <p>
+                    Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке.
+                </p>
+                <button id="button5" onclick="task_5()">Показать результат</button>
+                <div id="result5" style="display: none"></div>
+            </li>
+        </ol>
+    </body>
+</html>
