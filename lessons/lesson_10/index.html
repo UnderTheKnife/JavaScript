@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS-lesson 8</title>
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <ol>
+            <li>
+                <p>
+                    Сделайте функцию, которая возвращает квадрат числа. Число передается параметром.
+                </p>
+                <form onsubmit="return false;">
+                    <input id="a1" type="text" title="number">
+                    <input type="submit" onclick="task_1(document.getElementById('a1').value)" value="Показать результат">
+                </form>
+                <div id="result1"></div>
+            </li>
+            <li>
+                <p>
+                    Сделайте функцию, которая возвращает сумму двух чисел.
+                </p>
+                <form onsubmit="return false;">
+                    <input id="a2" type="text" title="number">
+                    <input id="b2" type="text" title="number">
+                    <input type="submit" onclick="task_2(document.getElementById('a2').value, document.getElementById('b2').value)" value="Показать результат">
+                </form>
+                <div id="result2"></div>
+            </li>
+            <li>
+                <p>
+                    Сделайте функцию, которая отнимает от первого числа второе и делит на третье.
+                </p>
+                <form onsubmit="return false;">
+                    <input id="a3" type="text" title="number">
+                    <input id="b3" type="text" title="number">
+                    <input id="c3" type="text" title="number">
+                    <input type="submit" onclick="task_3(document.getElementById('a3').value, document.getElementById('b3').value, document.getElementById('c3').value)" value="Показать результат">
+                </form>
+                <div id="result3"></div>
+            </li>
+            <li>
+                <p>
+                    Сделайте функцию, которая принимает параметром число от 1 до 7, а возвращает день недели на русском языке.
+                </p>
+                <form onsubmit="return false;">
+                    <input id="day4" type="text" title="number">
+                    <input type="submit" onclick="task_4(document.getElementById('day4').value)" value="Показать результат">
+                </form>
+                <div id="result4"></div>
+            </li>
+        </ol>
+    </body>
+</html>
