@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS-lesson 16</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <ol>
+            <li>
+                <p>
+                    Сделайте функцию isNumberInRange, которая параметром принимает число и проверяет, что оно больше нуля и меньше 10.
+                    Если это так - пусть функция возвращает true, если не так - false.
+                </p>
+                <form onsubmit="return false;">
+                    <input id="string1" type="text" placeholder="Строка">
+                    <input type="submit" onclick="task_1(document.getElementById('string1').value)" value="Показать результат">
+                </form>
+                <div id="result1"></div>
+            </li>
+            <li>
+                <p>
+                    Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'.
+                </p>
+                <button onclick="task_2()">Показать результат</button>
+                <div id="result2">var_text_hello</div>
+            </li>
+            <li>
+                <p>
+                    Сделайте функцию isNumberInRange, которая параметром принимает число и проверяет, что оно больше нуля и меньше 10.
+                    Если это так - пусть функция возвращает true, если не так - false.
+                </p>
+                <form onsubmit="return false;">
+                    <input id="string3-1" type="text" placeholder="Введите массив через запятую">
+                    <input id="string3-2" type="text" placeholder="Введите елемент">
+                    <input type="submit" onclick="task_3(document.getElementById('string3-1').value, document.getElementById('string3-2').value)" value="Показать результат">
+                </form>
+                <div id="result3"></div>
+            </li>
+            <li>
+                <p>
+                    Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'.
+                </p>
+                <button id="button4" onclick="task_4()">Показать результат</button>
+                <div id="result4" style="display: none"></div>
+            </li>
+        </ol>
+    </body>
+</html>
