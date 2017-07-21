@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS - lesson 22</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/index.js"></script>
+    </head>
+    <body onload="startClock()">
+        <ol>
+            <li>
+                <p class="task">
+                    Создайте отсчет от 0 до бесконечности:
+                </p>
+                <div class="wrapper">
+                    <p id="timer1">0</p>
+                    <button title="timer1" onclick="start(this,0)">Нажмите на меня!</button>
+                </div>
+            </li>
+            <li>
+                <p class="task">
+                    Создайте отсчет с кнопкой остановки:
+                </p>
+                <div id="block2" class="wrapper">
+                    <p id="timer2">0</p>
+                    <button class="start" title="timer2" onclick="start(this,1)">Старт</button>
+                    <button class="stop" title="timer2" onclick="stop(this,1)">Стоп</button>
+                </div>
+            </li>
+            <li>
+                <p>
+                    Создайте тикающие часики:
+                </p>
+                <div class="wrapper">
+                    <p id="clock3">00:00:00</p>
+                </div>
+            </li>
+            <li>
+                <p class="task">
+                    Создайте отсчет с кнопкой остановки:
+                </p>
+                <div id="block4" class="wrapper">
+                    <p id="timer4">10</p>
+                    <button class="start" title="timer4" onclick="start(this,0)">Старт</button>
+                    <p id="stop4"></p>
+                </div>
+            </li>
+        </ol>
+    </body>
+</html>
