@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/index.js"></script>
     </head>
-    <body onload="startClock()">
+    <body onload="onload()">
         <ol>
             <li>
                 <p class="task">
@@ -43,6 +43,67 @@
                     <p id="timer4">10</p>
                     <button class="start" title="timer4" onclick="start(this,0)">Старт</button>
                     <p id="stop4"></p>
+                </div>
+            </li>
+            <li>
+                <p>
+                    Создайте простой слайдер:
+                </p>
+                <div id="block5" class="wrapper">
+                    <img src="img/smiles/1.png" id="img5" alt="timer5" onload="start(this, 0)">
+                </div>
+            </li>
+            <li>
+                <p class="task">
+                    Создайте карусель:
+                </p>
+                <div id="block6" class="wrapper">
+                    <img src="img/smiles/1.png" id="img6_1">
+                    <img src="img/smiles/2.png" id="img6_2">
+                    <img src="img/smiles/3.png" id="img6_3">
+                    <br>
+                    <button class="start" title="timer6" onclick="start(this,0)">Запустить карусель!</button>
+                </div>
+            </li>
+            <li>
+                <p class="task">
+                    Создайте карусель:
+                </p>
+                <div id="block7" class="wrapper">
+                    <img src="img/smiles/1.png" id="img7_1">
+                    <img src="img/smiles/2.png" id="img7_2">
+                    <img src="img/smiles/3.png" id="img7_3">
+                    <br>
+                    <img src="img/smiles/4.png" id="img7_4">
+                    <img src="img/smiles/5.png" id="img7_5">
+                    <img src="img/smiles/6.png" id="img7_6">
+                    <br>
+                    <button class="start" title="timer7" onclick="start(this,1)">Запустить карусель!</button>
+                    <button class="stop" title="timer7" onclick="stop(this,1)">Остановить карусель!</button>
+                </div>
+            </li>
+            <li>
+                <p>
+                    Создайте отсчет до полуночи:
+                </p>
+                <div id="block8" class="wrapper">
+                    <p>
+                        До полуночи осталось:
+                    </p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Часы</th>
+                                <th>Минуты</th>
+                                <th>Секунды</th>
+                            </tr>
+                            <tr>
+                                <td id="hours"></td>
+                                <td id="minutes"></td>
+                                <td id="seconds"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </li>
         </ol>
