@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS-lesson 23</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <ol>
+            <li>
+                <p class="task">
+                    Даны картинки. Привяжите к каждой картинке событие,
+                    чтобы по клику на картинку алертом выводился ее src.
+                </p>
+                <div class="wrapper">
+                    <img src="img/smiles/1.png" onclick="show1(this)">
+                    <img src="img/smiles/2.png" onclick="show1(this)">
+                    <img src="img/smiles/3.png" onclick="show1(this)">
+                    <br>
+                    <img src="img/smiles/4.png" onclick="show1(this)">
+                    <img src="img/smiles/5.png" onclick="show1(this)">
+                    <img src="img/smiles/6.png" onclick="show1(this)">
+                </div>
+            </li>
+            <li>
+                <p class="task">
+                    Даны ссылки. Привяжите всем ссылкам событие - по наведению
+                    на ссылку в атрибут title запишется ее текст.
+                </p>
+                <div id="block2" class="wrapper">
+                    <p>
+                        <a href="#" title="">Текст первой ссылки</a>
+                    </p>
+                    <p>
+                        <a href="#" title="">Текст второй ссылки</a>
+                    </p>
+                    <p>
+                        <a href="#" title="">Текст третьей ссылки</a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <p class="task">
+                    Привяжите всем ссылкам событие - по наведению на ссылку
+                    в конец ее текста дописывается ее href в круглых скобках.
+                </p>
+                <div id="block3" class="wrapper">
+                    <p>
+                        <a href="http://ya.ru" title="">Текст первой ссылки</a>
+                    </p>
+                    <p>
+                        <a href="http://tut.by" title="">Текст второй ссылки</a>
+                    </p>
+                    <p>
+                        <a href="http://google.com" title="">Текст третьей ссылки</a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <p class="task">
+                    Дополните предыдущую задачу: после первого наведению на
+                    ссылку следует отвязать от нее событие, которое добавляет
+                    href в конец текста.
+                </p>
+                <div id="block4" class="wrapper">
+                    <p>
+                        <a href="http://ya.ru" title="">Текст первой ссылки</a>
+                    </p>
+                    <p>
+                        <a href="http://tut.by" title="">Текст второй ссылки</a>
+                    </p>
+                    <p>
+                        <a href="http://google.com" title="">Текст третьей ссылки</a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <p class="task">
+                    Привяжите всем инпутам следующее событие - по потери фокуса
+                    каждый инпут выводит свое value в абзац с id="test".
+                </p>
+                <div id="block5" class="wrapper">
+                    <input type="text" placeholder="input 1">
+                    <input type="text" placeholder="input 2">
+                    <input type="text" placeholder="input 3">
+                    <p id="test5"></p>
+                </div>
+            </li>
+            <li>
+                <p class="task">
+                    Для всех инпутов сделайте так, чтобы они выводили свой value
+                    алертом при нажатии на любой из них, но только по первому
+                    нажатию. Повторное нажатие на инпут не должно вызывать реакции.
+                </p>
+                <div id="block6" class="wrapper">
+                    <input type="text" value="hello" placeholder="input 1">
+                    <input type="text" value="world" placeholder="input 2">
+                    <input type="text" value="!!!" placeholder="input 3">
+                </div>
+            </li>
+            <li>
+                <p class="task">
+                    Даны абзацы с числами. По нажатию на абзац в нем должен
+                    появится квадрат числа, которое он содержит.
+                </p>
+                <div id="block7" class="wrapper">
+                    <p>2</p>
+                    <p>4</p>
+                    <p>6</p>
+                </div>
+            </li>
+            <li>
+                <p class="task">
+                    Даны инпуты. Сделайте так, чтобы все инпуты по потери
+                    фокуса проверяли свое содержимое на правильное количество
+                    символов. Сколько символов должно быть в инпуте, указывается
+                    в атрибуте data-length. Если вбито правильное количество,
+                    то граница инпута становится зеленой, если неправильное - красной.
+                </p>
+                <div id="block8" class="wrapper">
+                    <input type="text" data-length="4" placeholder="length : 4">
+                    <input type="text" data-length="7" placeholder="length : 7">
+                    <input type="text" data-length="9" placeholder="length : 9">
+                </div>
+            </li>
+            <li>
+                <p class="task">
+                    Даны дивы. По первому нажатию на каждый див он красится
+                    красным фоном, по второму красится обратно и так далее
+                    каждый клик происходит чередование фона. Сделайте так,
+                    чтобы было две функции: одна красит в красный цвет, другая
+                    в зеленый и они сменяли друг друга через removeEventListener.
+                </p>
+                <div id="block9" class="wrapper">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </div>
+            </li>
+
+        </ol>
+    </body>
+</html>
