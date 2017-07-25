@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS-lesson 28</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <p>
+            Дана таблица с юзерами с двумя колонками: имя и фамилия. Под таблицей
+            сделайте форму, с помощью которой можно будет добавить нового юзера в
+            таблицу. Сделайте так, чтобы при клике на любую ячейку появлялся prompt,
+            с помощью которого можно изменить текст ячейки. Задачу решите с помощью
+            делегирования (то есть событие должно быть навешано на table).
+        </p>
+        <table id="users">
+            <tbody>
+                <tr>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <form onsubmit="return false;">
+            <input id="firstName" placeholder="Имя">
+            <input id="lastName" placeholder="Фамилия">
+            <br><br>
+            <input type="submit" onclick="add()" value="add">
+        </form>
+    </body>
+</html>
