@@ -1,5 +1,8 @@
+"use strict";
+/*global window: false */
+
 function block1() {
-    alert(window.document.documentElement.clientHeight);
+    window.alert(window.document.documentElement.clientHeight);
 }
 
 function block2() {
@@ -8,5 +11,5 @@ function block2() {
 }
 
 function block3() {
-    alert('Текущая прокрутка сверху: ' + window.pageYOffset )
+    window.alert('Текущая прокрутка сверху: ' + window.pageYOffset);
 }
