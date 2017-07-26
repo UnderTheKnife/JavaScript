@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS-lesson 29</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <ol>
+            <li>
+                <p>
+                    Дана форма с id="form". В ней даны инпуты, в них числа.
+                    Дана кнопка. По нажатию на эту кнопку получите форму по ее
+                    id, затем циклом переберите все инпуты в ней и найдите сумму
+                    чисел из этих инпутов.
+                </p>
+                <form id="form1" onsubmit="return false;">
+                    <input placeholder="value 1">
+                    <input placeholder="value 2">
+                    <input placeholder="value 3">
+                    <input placeholder="value 4">
+                    <input type=submit onclick="block1()" value="Click!">
+                </form>
+            </li>
+            <li id="block2">
+                <p>
+                    Дана форма с id="form". В ней даны инпуты, в них числа.
+                    Дана кнопка. По нажатию на эту кнопку получите форму по ее
+                    id, затем циклом переберите все инпуты в ней и найдите сумму
+                    чисел из этих инпутов.
+                </p>
+                <form class="form2" onsubmit="return false;">
+                   <input value="1" placeholder="value 1">
+                   <input value="1" placeholder="value 2">
+                   <input value="1" placeholder="value 3">
+                   <input value="1" placeholder="value 4">
+                </form>
+                <form class="form2" onsubmit="return false;">
+                   <input value="1" placeholder="value 1">
+                   <input value="1" placeholder="value 2">
+                   <input value="1" placeholder="value 3">
+                   <input value="1" placeholder="value 4">
+                </form>
+                <form class="form2" onsubmit="return false;">
+                   <input value="1" placeholder="value 1">
+                   <input value="1" placeholder="value 2">
+                   <input value="1" placeholder="value 3">
+                   <input value="1" placeholder="value 4">
+                </form>
+                <br>
+                <button onclick="block2()">Click!</button>
+            </li>
+            <li>
+                <p>
+                    Дан селект. Дан инпут. По изменению селекта выведите текст
+                    выбранного пункта в инпут.
+                </p>
+                <select id="select3" title="select3" onchange="block3()">
+                    <option value="0" selected></option>
+                    <option value="Russian">Привет</option>
+                    <option value="English">Hello</option>
+                    <option value="Spanish">Hola</option>
+                    <option value="German">Hallo</option>
+                    <option value="French">Bonjour</option>
+                    <option value="Belarusian">Прывітанне</option>
+                </select>
+                <input id="input3" placeholder="selected value"/>
+            </li>
+            <li>
+                <p>
+                    Дан селект. Дан инпут. Дана кнопка. Сделайте так, чтобы в
+                    инпут можно было ввести число, нажать на кнопку и в селекте
+                    становился выбранным пункт с этим номером.
+                </p>
+                <select id="select4" title="select4">
+                    <option value="0" selected></option>
+                    <option value="Russian">Привет</option>
+                    <option value="English">Hello</option>
+                    <option value="Spanish">Hola</option>
+                    <option value="German">Hallo</option>
+                    <option value="French">Bonjour</option>
+                    <option value="Belarusian">Прывітанне</option>
+                </select>
+                <input id="input4" placeholder="selected value"/>
+                <button onclick=block4()>Select</button>
+            </li>
+            <li id="block5">
+                <p>
+                    Дан селект со списком стран. Сделайте так, чтобы при выборе
+                    страны рядом появлялся еще и селект со списком городов из
+                    этой страны.
+                </p>
+            </li>
+        </ol>
+    </body>
+</html>
