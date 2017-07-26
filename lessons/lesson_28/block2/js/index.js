@@ -1,3 +1,6 @@
+"use strict";
+/*global window: false */
+
 function isEmpty(fields) {
     var elem,
         i;
@@ -11,7 +14,7 @@ function isEmpty(fields) {
 }
 
 function edit() {
-    this.innerHTML = prompt('Edit:',this.innerHTML);
+    this.innerHTML = window.prompt('Edit:', this.innerHTML);
 }
 
 function add() {
@@ -30,7 +33,7 @@ function add() {
             elem.addEventListener('click', edit);
             tr.appendChild(elem);
         }
-    ul.appendChild(tr);
+        ul.appendChild(tr);
     }
 }
 
