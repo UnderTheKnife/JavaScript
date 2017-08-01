@@ -60,7 +60,7 @@ function getDivisors(num) {
   return arr;
 }
 
-function task_1() {
+function task1() {
   let num = document.getElementById('num1').value;
 
   if (num === '' || !parseInt(num)) {
@@ -71,7 +71,7 @@ function task_1() {
 
 }
 
-function task_2() {
+function task2() {
   let arr = [1, 3, 5, 6, 9, 11, 15, 30];
   let newArr = [];
 
@@ -86,7 +86,7 @@ function task_2() {
   display(2, newArr);
 }
 
-function task_3() {
+function task3() {
   const num = document.getElementById('num3').value;
   let answer;
 
@@ -101,7 +101,7 @@ function task_3() {
   display(3, answer, false);
 }
 
-function task_4() {
+function task4() {
   let answer = '';
 
   for (let i = 1; i <= 2017; i++) {
@@ -115,7 +115,7 @@ function task_4() {
   display(4, answer);
 }
 
-function task_5() {
+function task5() {
   const num = document.getElementById('num5').value;
   let answer;
 
@@ -130,7 +130,7 @@ function task_5() {
   display(5, answer, false);
 }
 
-function task_6() {
+function task6() {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let newArr = [];
 
@@ -145,7 +145,7 @@ function task_6() {
   display(6, newArr);
 }
 
-function task_7() {
+function task7() {
   const num = document.getElementById('num7').value;
   let answer;
 
@@ -165,7 +165,7 @@ window.addEventListener('load', () => {
   for (let id = 1; id <= 7; id += 1) {
     let result = document.getElementById(`result${id}`);
     let element = window.document.getElementById(`button${id}`);
-    element.addEventListener('click', window[`task_${id}`]);
+    element.addEventListener('click', window[`task${id}`]);
     result.style.display = 'none';
   }
 

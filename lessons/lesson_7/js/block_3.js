@@ -1,6 +1,6 @@
 let numTask1 = 0;
 
-function task_1() {
+function task1() {
   const result = document.getElementById('result1');
   const button = document.getElementById('button1');
   const str = 'Я-учу-javascript!';
@@ -22,5 +22,5 @@ function task_1() {
 }
 
 window.addEventListener('load', () => {
-  window.document.getElementById('button1').addEventListener('click', task_1);
+  window.document.getElementById('button1').addEventListener('click', task1);
 });

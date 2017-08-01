@@ -15,7 +15,7 @@ function display(num, answer) {
   }
 }
 
-function task_1() {
+function task1() {
   const arr1 = [1, 2, 3];
   const arr2 = [4, 5, 6];
   let answer = arr1.concat(arr2);
@@ -23,14 +23,14 @@ function task_1() {
   display(1, answer);
 }
 
-function task_2() {
+function task2() {
   const arr = [1, 2, 3];
   let answer = arr.reverse();
 
   display(2, answer);
 }
 
-function task_3() {
+function task3() {
   let arr = [1, 2, 3];
 
   arr.push(4, 5, 6);
@@ -39,7 +39,7 @@ function task_3() {
 
 }
 
-function task_4() {
+function task4() {
   let arr = [1, 2, 3];
 
   arr.unshift(4, 5, 6);
@@ -47,35 +47,35 @@ function task_4() {
   display(4, arr);
 }
 
-function task_5() {
+function task5() {
   const arr = ['js', 'css', 'jq'];
   let answer = arr.shift();
 
   display(5, answer);
 }
 
-function task_6() {
+function task6() {
   const arr = ['js', 'css', 'jq'];
   let answer = arr.pop();
 
   display(6, answer);
 }
 
-function task_7() {
+function task7() {
   const arr = [1, 2, 3, 4, 5];
   let answer = arr.slice(0, 3);
 
   display(7, answer);
 }
 
-function task_8() {
+function task8() {
   const arr = [1, 2, 3, 4, 5];
   let answer = arr.slice(-2);
 
   display(8, answer);
 }
 
-function task_9() {
+function task9() {
   let arr = [1, 2, 3, 4, 5];
 
   arr.splice(1, 2);
@@ -83,14 +83,14 @@ function task_9() {
   display(9, arr);
 }
 
-function task_10() {
+function task10() {
   const arr = [1, 2, 3, 4, 5];
   let answer = arr.splice(1, 3);
 
   display(10, answer);
 }
 
-function task_11() {
+function task11() {
   let arr = [1, 2, 3, 4, 5];
 
   arr.splice(3, 0, 'a', 'b', 'c');
@@ -98,7 +98,7 @@ function task_11() {
   display(11, arr);
 }
 
-function task_12() {
+function task12() {
   let arr = [1, 2, 3, 4, 5];
 
   arr.splice(1, 0, 'a', 'b');
@@ -108,14 +108,14 @@ function task_12() {
   display(12, arr);
 }
 
-function task_13() {
+function task13() {
   const arr = [3, 4, 1, 2, 7];
   let answer = arr.sort();
 
   display(13, answer);
 }
 
-function task_14() {
+function task14() {
   const arr = {
     js: 'test',
     jq: 'hello',
@@ -129,6 +129,6 @@ function task_14() {
 window.addEventListener('load', () => {
   for (let button = 1; button <= 14; button += 1) {
     let element = window.document.getElementById(`button${button}`);
-    element.addEventListener('click', window[`task_${button}`]);
+    element.addEventListener('click', window[`task${button}`]);
   }
 });

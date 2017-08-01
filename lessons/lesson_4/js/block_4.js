@@ -1,4 +1,4 @@
-function task_1(num) {
+function task1(num) {
   let result;
   
   switch (num) {
@@ -27,7 +27,7 @@ window.addEventListener('load',() => {
   for (let button = 1; button <= 4; button += 1){
     window.document.getElementById(`task${button}`).addEventListener('click',
       () =>{
-        window['task_1'](button);
+        window['task1'](button);
       });
 
   }

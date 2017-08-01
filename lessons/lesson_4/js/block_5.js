@@ -1,4 +1,4 @@
-function task_1() {
+function task1() {
   const day = document.getElementById('day').value;
   let decade;
 
@@ -15,7 +15,7 @@ function task_1() {
   alert(`Декада : ${decade}`);
 }
 
-function task_2() {
+function task2() {
   const month = parseInt(document.getElementById('month').value, 10);
   let result;
 
@@ -34,14 +34,14 @@ function task_2() {
   alert('Пора года : ' + result);
 }
 
-function task_3() {
+function task3() {
   const str = document.getElementById('string').value;
   let answer = (str[0] === 'a') ? 'Да!' : 'Нет!';
 
   alert(answer);
 }
 
-function task_4(number) {
+function task4(number) {
   const str = document.getElementById('string2').value;
   let answer = '';
 
@@ -54,7 +54,7 @@ function task_4(number) {
   alert(answer);
 }
 
-function task_5() {
+function task5() {
   const str = document.getElementById('string3').value;
   const numbers = str.split('');
   let result = 0;
@@ -72,7 +72,7 @@ function task_5() {
   alert(result);
 }
 
-function task_6() {
+function task6() {
   const str = document.getElementById('string4').value;
   let first = parseInt(str[0]) + parseInt(str[1]) + parseInt(str[2]);
   let second = parseInt(str[3]) + parseInt(str[4]) + parseInt(str[5]);
@@ -98,12 +98,12 @@ window.addEventListener('load', () => {
 
       for (let button = 0; button < elements.length; button += 1) {
         elements[button].addEventListener('click', () => {
-          window[`task_${block}`](values[button]);
+          window[`task${block}`](values[button]);
         });
       }
 
     } else {
-      elements[0].addEventListener('click', window[`task_${block}`]);
+      elements[0].addEventListener('click', window[`task${block}`]);
     }
 
   }

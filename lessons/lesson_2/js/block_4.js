@@ -2,9 +2,9 @@
 
 function search() {
   const str = 'abcde';
-  const str_array = str.split('');
+  const strArray = str.split('');
 
-  str_array.forEach(function (element, key) {
+  strArray.forEach(function (element, key) {
     if (element === 'a' || element === 'b' || element === 'e') {
       alert(`str[${key}] : ${element}`);
     }

@@ -38,7 +38,7 @@ function inArray(str, arr) {
   return false;
 }
 
-function task_1() {
+function task1() {
   const str = document.getElementById('string1').value;
   let arr = str.split(' ');
   let newArr = [];
@@ -58,7 +58,7 @@ function task_1() {
   display(1, answer, false);
 }
 
-function task_2() {
+function task2() {
   const str = 'var_text_hello';
   let arr = str.split('_');
   let newArr = [];
@@ -72,7 +72,7 @@ function task_2() {
   display(2, newStr, true);
 }
 
-function task_3() {
+function task3() {
   const str = document.getElementById('string3-1').value;
   const substr = document.getElementById('string3-2').value;
   let answer;
@@ -88,7 +88,7 @@ function task_3() {
   display(3, answer, false);
 }
 
-function task_4() {
+function task4() {
   const str = '123456';
   let arr = str.split('');
   let answer;
@@ -109,7 +109,7 @@ window.addEventListener('load', () => {
   for (let id = 1; id <= 4; id += 1) {
     let result = document.getElementById(`result${id}`);
     let element = window.document.getElementById(`button${id}`);
-    element.addEventListener('click', window[`task_${id}`]);
+    element.addEventListener('click', window[`task${id}`]);
     result.style.display = 'none';
   }
 

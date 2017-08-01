@@ -3,7 +3,7 @@ let numTask2 = 0;
 let numTask3 = 0;
 let numTask4 = 0;
 
-function task_1() {
+function task1() {
   let num = 1;
 
   numTask1 += 1;
@@ -25,7 +25,7 @@ function task_1() {
   }
 }
 
-function task_2() {
+function task2() {
   let num = 11;
 
   numTask2 += 1;
@@ -47,7 +47,7 @@ function task_2() {
   }
 }
 
-function task_3() {
+function task3() {
   let num = 0;
 
   numTask3 += 1;
@@ -73,7 +73,7 @@ function task_3() {
   }
 }
 
-function task_4() {
+function task4() {
   let num = 1;
   let sum = 0;
 
@@ -98,8 +98,8 @@ function task_4() {
 }
 
 window.addEventListener('load', () => {
-  window.document.getElementById('button1').addEventListener('click', task_1);
-  window.document.getElementById('button2').addEventListener('click', task_2);
-  window.document.getElementById('button3').addEventListener('click', task_3);
-  window.document.getElementById('button4').addEventListener('click', task_4);
+  window.document.getElementById('button1').addEventListener('click', task1);
+  window.document.getElementById('button2').addEventListener('click', task2);
+  window.document.getElementById('button3').addEventListener('click', task3);
+  window.document.getElementById('button4').addEventListener('click', task4);
 });

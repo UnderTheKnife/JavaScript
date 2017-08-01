@@ -1,6 +1,6 @@
 let numTask1 = 0;
 
-function task_1() {
+function task1() {
   const result = document.getElementById('result1');
   const button = document.getElementById('button1');
   const a = 10;
@@ -22,7 +22,7 @@ function task_1() {
   }
 }
 
-function task_2() {
+function task2() {
   const a = document.getElementById('a').value;
   const b = document.getElementById('b').value;
   const result = document.getElementById('result2');
@@ -34,6 +34,6 @@ function task_2() {
 }
 
 window.addEventListener('load', () => {
-  window.document.getElementById('button1').addEventListener('click', task_1);
-  window.document.getElementById('button2').addEventListener('click', task_2);
+  window.document.getElementById('button1').addEventListener('click', task1);
+  window.document.getElementById('button2').addEventListener('click', task2);
 });

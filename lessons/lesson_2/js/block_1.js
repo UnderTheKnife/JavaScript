@@ -1,12 +1,12 @@
 'use strict';
 
-function task_1() {
+function task1() {
   const num = 3;
 
   alert(num);
 }
 
-function task_2() {
+function task2() {
   const a = 10;
   const b = 2;
   let addition = a + b;
@@ -20,7 +20,7 @@ function task_2() {
   alert(`Division : ${division}`);
 }
 
-function task_3() {
+function task3() {
   const c = 15;
   const d = 2;
   let result = c + d;
@@ -28,7 +28,7 @@ function task_3() {
   alert(`Result : ${result}`);
 }
 
-function task_4() {
+function task4() {
   const a = 10;
   const b = 2;
   const c = 5;
@@ -37,7 +37,7 @@ function task_4() {
   alert(`Addition : ${addition}`);
 }
 
-function task_5() {
+function task5() {
   const a = 17;
   const b = 10;
   const d = 7;
@@ -48,9 +48,9 @@ function task_5() {
 }
 
 window.addEventListener('load',function() {
-  window.document.getElementById('task1').addEventListener('click', task_1);
-  window.document.getElementById('task2').addEventListener('click', task_2);
-  window.document.getElementById('task3').addEventListener('click', task_3);
-  window.document.getElementById('task4').addEventListener('click', task_4);
-  window.document.getElementById('task5').addEventListener('click', task_5);
+  window.document.getElementById('task1').addEventListener('click', task1);
+  window.document.getElementById('task2').addEventListener('click', task2);
+  window.document.getElementById('task3').addEventListener('click', task3);
+  window.document.getElementById('task4').addEventListener('click', task4);
+  window.document.getElementById('task5').addEventListener('click', task5);
 });

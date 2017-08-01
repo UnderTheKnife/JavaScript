@@ -37,7 +37,7 @@ function func2(num) {
 
 }
 
-function task_1() {
+function task1() {
   display(1, 'clear');
 
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -45,7 +45,7 @@ function task_1() {
   func(arr);
 }
 
-function task_2() {
+function task2() {
   const num = document.getElementById('num2').value;
   display(2, 'clear');
   if (num === '') {
@@ -60,7 +60,7 @@ window.addEventListener('load', () => {
   for (let id = 1; id <= 2; id += 1) {
     let result = document.getElementById(`result${id}`);
     let element = window.document.getElementById(`button${id}`);
-    element.addEventListener('click', window[`task_${id}`]);
+    element.addEventListener('click', window[`task${id}`]);
     result.style.display = 'none';
   }
 

@@ -1,7 +1,7 @@
 let numTask1 = 0;
 let numTask2 = 0;
 
-function task_1() {
+function task1() {
   const result = document.getElementById('result1');
   const button = document.getElementById('button1');
   let answer = Math.sqrt(379);
@@ -23,7 +23,7 @@ function task_1() {
   }
 }
 
-function task_2() {
+function task2() {
   const result = document.getElementById('result2');
   const button = document.getElementById('button2');
   const obj = {floor: '', ceil: ''};
@@ -50,6 +50,6 @@ function task_2() {
 }
 
 window.addEventListener('load', () => {
-  window.document.getElementById('button1').addEventListener('click', task_1);
-  window.document.getElementById('button2').addEventListener('click', task_2);
+  window.document.getElementById('button1').addEventListener('click', task1);
+  window.document.getElementById('button2').addEventListener('click', task2);
 });

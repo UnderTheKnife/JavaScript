@@ -1,7 +1,7 @@
 let numTask1 = 0;
 let numTask2 = 0;
 
-function task_1() {
+function task1() {
   const arr = [1, 2, 3, 4, 5];
   let num;
 
@@ -24,7 +24,7 @@ function task_1() {
   }
 }
 
-function task_2() {
+function task2() {
   const arr = [1, 2, 3, 4, 5];
   let result = 0;
   let num;
@@ -50,6 +50,6 @@ function task_2() {
 }
 
 window.addEventListener('load', () => {
-  window.document.getElementById('button1').addEventListener('click', task_1);
-  window.document.getElementById('button2').addEventListener('click', task_2);
+  window.document.getElementById('button1').addEventListener('click', task1);
+  window.document.getElementById('button2').addEventListener('click', task2);
 });

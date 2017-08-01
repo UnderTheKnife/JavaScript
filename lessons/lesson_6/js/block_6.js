@@ -1,4 +1,4 @@
-function task_1() {
+function task1() {
   const a = document.getElementById('a1').value;
   const b = document.getElementById('b1').value;
   const result = document.getElementById('result1');
@@ -6,7 +6,7 @@ function task_1() {
   result.innerHTML = abs.toString();
 }
 
-function task_2() {
+function task2() {
   const a = document.getElementById('a2').value;
   const b = document.getElementById('b2').value;
   const result = document.getElementById('result2');
@@ -16,6 +16,6 @@ function task_2() {
 }
 
 window.addEventListener('load', () => {
-  window.document.getElementById('button1').addEventListener('click', task_1);
-  window.document.getElementById('button2').addEventListener('click', task_2);
+  window.document.getElementById('button1').addEventListener('click', task1);
+  window.document.getElementById('button2').addEventListener('click', task2);
 });

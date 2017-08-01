@@ -1,4 +1,4 @@
-function task_1() {
+function task1() {
   const obj = {
     a: 1,
     b: 2,
@@ -9,7 +9,7 @@ function task_1() {
   alert(obj.c);
 }
 
-function task_2() {
+function task2() {
   const arr = {
     'Kolya': '1000',
     'Vasya': '500',
@@ -24,7 +24,7 @@ function task_2() {
   }
 }
 
-function task_3() {
+function task3() {
   const days = {
     1: 'Понедельник',
     2: 'Вторник',
@@ -38,7 +38,7 @@ function task_3() {
   alert(days[4]);
 }
 
-function task_4() {
+function task4() {
   const days = {
     1: 'Понедельник',
     2: 'Вторник',
@@ -55,8 +55,8 @@ function task_4() {
 }
 
 window.addEventListener('load',function() {
-  window.document.getElementById('task1').addEventListener('click', task_1);
-  window.document.getElementById('task2').addEventListener('click', task_2);
-  window.document.getElementById('task3').addEventListener('click', task_3);
-  window.document.getElementById('task4').addEventListener('click', task_4);
+  window.document.getElementById('task1').addEventListener('click', task1);
+  window.document.getElementById('task2').addEventListener('click', task2);
+  window.document.getElementById('task3').addEventListener('click', task3);
+  window.document.getElementById('task4').addEventListener('click', task4);
 });

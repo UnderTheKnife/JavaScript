@@ -1,46 +1,46 @@
-function task_1(a) {
+function task1(a) {
   let answer = (a === 0) ? 'Верно' : 'Неверно';
 
   alert(answer);
 }
 
-function task_2(a) {
+function task2(a) {
   let answer = (a > 0) ? 'Верно' : 'Неверно';
 
   alert(answer);
 }
 
-function task_3(a) {
+function task3(a) {
   let answer = (a < 0) ? 'Верно' : 'Неверно';
 
   alert(answer);
 }
 
-function task_4(a) {
+function task4(a) {
   let answer = (a >= 0) ? 'Верно' : 'Неверно';
 
   alert(answer);
 }
 
-function task_5(a) {
+function task5(a) {
   let answer = (a <= 0) ? 'Верно' : 'Неверно';
 
   alert(answer);
 }
 
-function task_6(a) {
+function task6(a) {
   let answer = (a !== 0) ? 'Верно' : 'Неверно';
 
   alert(answer);
 }
 
-function task_7(a) {
+function task7(a) {
   let answer = (a === 'test') ? 'Верно' : 'Неверно';
 
   alert(answer);
 }
 
-function task_8(a) {
+function task8(a) {
   let answer = (a === '1') ? 'Верно' : 'Неверно';
 
   alert(answer);
@@ -68,7 +68,7 @@ window.addEventListener('load', () => {
       let property = values[block - 1][button];
 
       elements[button].addEventListener('click', () => {
-        window[`task_${block}`](property);
+        window[`task${block}`](property);
       });
 
     }

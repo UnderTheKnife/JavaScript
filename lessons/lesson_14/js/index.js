@@ -12,7 +12,7 @@ function display(num, answer) {
   }
 }
 
-function task_1() {
+function task1() {
   let str = 'x';
   let arr = [];
 
@@ -24,7 +24,7 @@ function task_1() {
   display(1, arr);
 }
 
-function task_2() {
+function task2() {
   let arr = [];
   let str;
 
@@ -41,7 +41,7 @@ function task_2() {
   display(2, arr);
 }
 
-function task_3() {
+function task3() {
   const value = document.getElementById('value3').value;
   const count = document.getElementById('count3').value;
   const result = document.getElementById('result3');
@@ -68,7 +68,7 @@ function task_3() {
   result.style.display = 'block';
 }
 
-function task_4() {
+function task4() {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let sum = 0;
   let answer;
@@ -86,7 +86,7 @@ function task_4() {
 
 }
 
-function task_5() {
+function task5() {
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let answer = [];
 
@@ -97,7 +97,7 @@ function task_5() {
   display(5, answer);
 }
 
-function task_6() {
+function task6() {
   let arr = [[1, 2, 3], [4, 5], [6]];
   let sum = 0;
 
@@ -112,7 +112,7 @@ function task_6() {
   display(6, sum);
 }
 
-function task_7() {
+function task7() {
   let arr = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
   let sum = 0;
 
@@ -136,7 +136,7 @@ window.addEventListener('load', () => {
   for (let id = 1; id <= 7; id += 1) {
     let result = document.getElementById(`result${id}`);
     let element = window.document.getElementById(`button${id}`);
-    element.addEventListener('click', window[`task_${id}`]);
+    element.addEventListener('click', window[`task${id}`]);
     result.style.display = 'none';
   }
 

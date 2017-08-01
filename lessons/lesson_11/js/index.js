@@ -15,7 +15,7 @@ function display(num, answer) {
   }
 }
 
-function task_1() {
+function task1() {
   const arr = [1, 2, 3, 5];
   let flag = false;
   let answer = `${arr} <br><br>`;
@@ -29,7 +29,7 @@ function task_1() {
   display(1, answer);
 }
 
-function task_2() {
+function task2() {
   const num = 31;
   let flag = false;
 
@@ -40,7 +40,7 @@ function task_2() {
   display(2, flag);
 }
 
-function task_3() {
+function task3() {
   const arr = [1, 2, 3, 3, 5];
   let flag = false;
   let answer = `${arr} <br><br>`;
@@ -57,6 +57,6 @@ function task_3() {
 window.addEventListener('load', () => {
   for (let button = 1; button <= 3; button += 1) {
     let element = window.document.getElementById(`button${button}`);
-    element.addEventListener('click', window[`task_${button}`]);
+    element.addEventListener('click', window[`task${button}`]);
   }
 });

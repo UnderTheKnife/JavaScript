@@ -1,12 +1,12 @@
 'use strict';
 
-function task_1() {
+function task1() {
   const arr = ['a', 'b', 'c'];
 
   alert(arr);
 }
 
-function task_2() {
+function task2() {
   const arr = ['a', 'b', 'c'];
   let num;
 
@@ -15,13 +15,13 @@ function task_2() {
   }
 }
 
-function task_3() {
+function task3() {
   const arr = ['a', 'b', 'c', 'd'];
 
   alert(`${arr[0]}+${arr[1]}; ${arr[2]}+${arr[3]}`);
 }
 
-function task_4() {
+function task4() {
   const arr = [2, 5, 3, 9];
   let result = arr[0] * arr[1] + arr[2] * arr[3];
 
@@ -29,8 +29,8 @@ function task_4() {
 }
 
 window.addEventListener('load',function() {
-  window.document.getElementById('task1').addEventListener('click', task_1);
-  window.document.getElementById('task2').addEventListener('click', task_2);
-  window.document.getElementById('task3').addEventListener('click', task_3);
-  window.document.getElementById('task4').addEventListener('click', task_4);
+  window.document.getElementById('task1').addEventListener('click', task1);
+  window.document.getElementById('task2').addEventListener('click', task2);
+  window.document.getElementById('task3').addEventListener('click', task3);
+  window.document.getElementById('task4').addEventListener('click', task4);
 });

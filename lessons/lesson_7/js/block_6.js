@@ -1,11 +1,11 @@
-function task_1() {
+function task1() {
   const result = document.getElementById('result1');
   const str = 'я учу javascript!';
 
   result.innerHTML = `${str[0].toUpperCase()}${str.slice(1)}`;
 }
 
-function task_2() {
+function task2() {
   const result = document.getElementById('result2');
   const str = 'я учу javascript!';
   const arr = str.split(' ');
@@ -17,7 +17,7 @@ function task_2() {
   result.innerHTML = arr.join(' ');
 }
 
-function task_3() {
+function task3() {
   const result = document.getElementById('result3');
   const str = 'var_test_text';
   let arr = str.split('_');
@@ -29,7 +29,7 @@ function task_3() {
 }
 
 window.addEventListener('load', () => {
-  window.document.getElementById('button1').addEventListener('click', task_1);
-  window.document.getElementById('button2').addEventListener('click', task_2);
-  window.document.getElementById('button3').addEventListener('click', task_3);
+  window.document.getElementById('button1').addEventListener('click', task1);
+  window.document.getElementById('button2').addEventListener('click', task2);
+  window.document.getElementById('button3').addEventListener('click', task3);
 });

@@ -1,10 +1,10 @@
-function task_1(a) {
+function task1(a) {
   let answer = (a > 0 && a < 5) ? 'Верно' : 'Неверно';
 
   alert(answer);
 }
 
-function task_2(a) {
+function task2(a) {
   let addition = a + 7;
   let division = a / 10;
   let answer = (a === 0 || a === 2) ? addition : division;
@@ -12,7 +12,7 @@ function task_2(a) {
   alert(answer);
 }
 
-function task_3(values) {
+function task3(values) {
   const a = values[0];
   const b = values[1];
   let addition = a + b;
@@ -22,7 +22,7 @@ function task_3(values) {
   alert(answer);
 }
 
-function task_4(values) {
+function task4(values) {
   const a = values[0];
   const b = values[1];
   let answer = ((a > 2 && a < 11) || (b >= 6 && b < 14)) ? 'Верно' : 'Неверно';
@@ -47,7 +47,7 @@ window.addEventListener('load',function() {
       let property = values[block - 1][button];
 
       elements[button].addEventListener('click', () => {
-        window[`task_${block}`](property);
+        window[`task${block}`](property);
       });
 
     }

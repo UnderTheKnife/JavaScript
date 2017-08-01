@@ -1,4 +1,4 @@
-function display_table(mainId, secId, answer, count) {
+function displayTable(mainId, secId, answer, count) {
   let main = document.getElementById(`result${mainId}`);
   let result = document.getElementById(`result${secId}`);
   let button = document.getElementById(`button${mainId}`);
@@ -33,7 +33,7 @@ function display(num, answer) {
 
 let countTask1 = 0;
 
-function task_1() {
+function task1() {
   let multiply;
   let secId;
   let str;
@@ -47,13 +47,13 @@ function task_1() {
       multiply = i * j;
       str = `${i} * ${j} = ${multiply} <br>`;
 
-      display_table(1, secId, str, countTask1);
+      displayTable(1, secId, str, countTask1);
     }
 
   }
 }
 
-function task_2() {
+function task2() {
   let str = '';
 
   for (let i = 1; i < 10; i++) {
@@ -63,7 +63,7 @@ function task_2() {
   display(2, str);
 }
 
-function task_3() {
+function task3() {
   let str = '';
 
   for (let i = 9; i > 0; i--) {
@@ -73,7 +73,7 @@ function task_3() {
   display(3, str);
 }
 
-function task_4() {
+function task4() {
   let str = '-';
 
   for (let i = 1; i < 10; i++) {
@@ -83,7 +83,7 @@ function task_4() {
   display(4, str);
 }
 
-function task_5() {
+function task5() {
   let str = '';
 
   for (let i = 1; i <= 20; i++) {
@@ -98,7 +98,7 @@ function task_5() {
   display(5, str);
 }
 
-function task_6() {
+function task6() {
   let str = '';
 
   for (let i = 1; i <= 9; i++) {
@@ -113,7 +113,7 @@ function task_6() {
   display(6, str);
 }
 
-function task_7() {
+function task7() {
   let str = '';
 
   for (let i = 1; i <= 5; i++) {
@@ -133,7 +133,7 @@ window.addEventListener('load', () => {
   for (let id = 1; id <= 7; id += 1) {
     let result = document.getElementById(`result${id}`);
     let element = window.document.getElementById(`button${id}`);
-    element.addEventListener('click', window[`task_${id}`]);
+    element.addEventListener('click', window[`task${id}`]);
     result.style.display = 'none';
   }
 

@@ -7,7 +7,7 @@ let numTask6 = 0;
 let numTask7 = 0;
 let numTask8 = 0;
 
-function task_1() {
+function task1() {
   const arr = [2, 5, 9, 15, 0, 4];
   const result = document.getElementById('result1');
   const button = document.getElementById('button1');
@@ -37,7 +37,7 @@ function task_1() {
   }
 }
 
-function task_2() {
+function task2() {
   const arr = [-2, 5, 9, -15, 0, 4];
   const result = document.getElementById('result2');
   const button = document.getElementById('button2');
@@ -68,7 +68,7 @@ function task_2() {
   }
 }
 
-function task_3() {
+function task3() {
   const arr = [1, 2, 5, 9, 4, 13, 4, 10];
   const result = document.getElementById('result3');
   const button = document.getElementById('button3');
@@ -98,7 +98,7 @@ function task_3() {
   }
 }
 
-function task_4() {
+function task4() {
   const arr = [10, 20, 30, 50, 235, 3000];
   const result = document.getElementById('result4');
   const button = document.getElementById('button4');
@@ -130,7 +130,7 @@ function task_4() {
   }
 }
 
-function task_5() {
+function task5() {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const result = document.getElementById('result5');
   const button = document.getElementById('button5');
@@ -162,7 +162,7 @@ function task_5() {
   }
 }
 
-function task_6() {
+function task6() {
   const arr = [
     'Понедельник',
     'Вторник',
@@ -210,7 +210,7 @@ function task_6() {
   }
 }
 
-function task_7() {
+function task7() {
   const arr = [
     'Понедельник',
     'Вторник',
@@ -275,7 +275,7 @@ function task_7() {
   }
 }
 
-function task_8() {
+function task8() {
   const result = document.getElementById('result8');
   const button = document.getElementById('button8');
   let n = 1000;
@@ -308,6 +308,6 @@ function task_8() {
 window.addEventListener('load', () => {
   for (let button = 1; button <= 8; button += 1) {
     let element = window.document.getElementById(`button${button}`);
-    element.addEventListener('click', window[`task_${button}`]);
+    element.addEventListener('click', window[`task${button}`]);
   }
 });

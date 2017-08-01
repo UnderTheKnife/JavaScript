@@ -1,7 +1,7 @@
 let numTask1 = 0;
 let numTask2 = 0;
 
-function task_1() {
+function task1() {
   const obj = {
     green: 'зеленый',
     red: 'красный',
@@ -28,7 +28,7 @@ function task_1() {
   }
 }
 
-function task_2() {
+function task2() {
   const obj = {
     'Kolya' : 200,
     'Vasya' : 300,
@@ -58,6 +58,6 @@ function task_2() {
 }
 
 window.addEventListener('load', () => {
-  window.document.getElementById('button1').addEventListener('click', task_1);
-  window.document.getElementById('button2').addEventListener('click', task_2);
+  window.document.getElementById('button1').addEventListener('click', task1);
+  window.document.getElementById('button2').addEventListener('click', task2);
 });

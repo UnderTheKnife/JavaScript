@@ -22,14 +22,14 @@ function display(num, answer, but) {
   }
 }
 
-function task_1_1() {
+function task1_1() {
   let str = 'hello';
   str = str[0].toUpperCase() + str.substr(1);
 
   display(1, str, false);
 }
 
-function task_1_2() {
+function task1_2() {
   let str = 'hello';
   let answer;
 
@@ -40,21 +40,21 @@ function task_1_2() {
   display(1, answer, false);
 }
 
-function task_2() {
+function task2() {
   const str = '123456';
   let answer = str.split('').reverse().join('');
 
   display(2, answer);
 }
 
-function task_3() {
+function task3() {
   const num = 3751;
   let answer = num.toString(10).split('').sort().join('');
 
   display(3, answer);
 }
 
-function task_4() {
+function task4() {
   const str = 'http://theory.phphtml.net/';
   let substr = str.substr(0, 7);
   let answer;
@@ -64,7 +64,7 @@ function task_4() {
   display(4, answer);
 }
 
-function task_5() {
+function task5() {
   const str = 'index.html';
   let substr = str.substr(-5);
   let answer;
@@ -75,10 +75,10 @@ function task_5() {
 }
 
 window.addEventListener('load', () => {
-  window.document.getElementById('button1-1').addEventListener('click', task_1_1);
-  window.document.getElementById('button1-2').addEventListener('click', task_1_2);
+  window.document.getElementById('button1-1').addEventListener('click', task1_1);
+  window.document.getElementById('button1-2').addEventListener('click', task1_2);
   for (let button = 2; button <= 5; button += 1) {
     let element = window.document.getElementById(`button${button}`);
-    element.addEventListener('click', window[`task_${button}`]);
+    element.addEventListener('click', window[`task${button}`]);
   }
 });

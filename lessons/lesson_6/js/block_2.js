@@ -2,7 +2,7 @@ let numTask1 = 0;
 let numTask2 = 0;
 let numTask3 = 0;
 
-function task_1() {
+function task1() {
   const result = document.getElementById('result1');
   const button = document.getElementById('button1');
   let st;
@@ -21,7 +21,7 @@ function task_1() {
   }
 }
 
-function task_2() {
+function task2() {
   const result = document.getElementById('result2');
   const button = document.getElementById('button2');
   let st;
@@ -40,7 +40,7 @@ function task_2() {
   }
 }
 
-function task_3() {
+function task3() {
   const result = document.getElementById('result3');
   const button = document.getElementById('button3');
   const arr = [4, 2, 5, 19, 13, 0, 10];
@@ -67,7 +67,7 @@ function task_3() {
 }
 
 window.addEventListener('load', () => {
-  window.document.getElementById('button1').addEventListener('click', task_1);
-  window.document.getElementById('button2').addEventListener('click', task_2);
-  window.document.getElementById('button3').addEventListener('click', task_3);
+  window.document.getElementById('button1').addEventListener('click', task1);
+  window.document.getElementById('button2').addEventListener('click', task2);
+  window.document.getElementById('button3').addEventListener('click', task3);
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-function task_1() {
+function task1() {
   let num = 47;
 
   num += 7;
@@ -11,7 +11,7 @@ function task_1() {
   alert(num);
 }
 
-function task_2() {
+function task2() {
   let num = 10;
 
   num++;
@@ -22,6 +22,6 @@ function task_2() {
 }
 
 window.addEventListener('load',function() {
-  window.document.getElementById('task1').addEventListener('click', task_1);
-  window.document.getElementById('task2').addEventListener('click', task_2);
+  window.document.getElementById('task1').addEventListener('click', task1);
+  window.document.getElementById('task2').addEventListener('click', task2);
 });

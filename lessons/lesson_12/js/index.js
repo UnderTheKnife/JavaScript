@@ -10,7 +10,7 @@ function display(num, answer, fields) {
   result.innerHTML = answer;
 }
 
-function task_1() {
+function task1() {
   const a = parseInt(document.getElementById('a1').value);
   const b = parseInt(document.getElementById('b1').value);
   const fields = ['a', 'b'];
@@ -25,7 +25,7 @@ function task_1() {
   display(1, answer, fields);
 }
 
-function task_2() {
+function task2() {
   const a = parseInt(document.getElementById('a2').value);
   const b = parseInt(document.getElementById('b2').value);
   const fields = ['a', 'b'];
@@ -41,7 +41,7 @@ function task_2() {
   display(2, answer, fields);
 }
 
-function task_3() {
+function task3() {
   const a = parseInt(document.getElementById('a3').value);
   const fields = ['a'];
   let answer = `${a} < 0 ? : `;
@@ -58,6 +58,6 @@ function task_3() {
 window.addEventListener('load', () => {
   for (let button = 1; button <= 3; button += 1) {
     let element = window.document.getElementById(`button${button}`);
-    element.addEventListener('click', window[`task_${button}`]);
+    element.addEventListener('click', window[`task${button}`]);
   }
 });
