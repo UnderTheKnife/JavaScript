@@ -7,146 +7,150 @@
     <script src="js/index.js"></script>
 </head>
 <body>
-    <ol>
-        <li>
-            <p id="p1">
-                При нажатии на кнопку текст в абзаце поменяется.
-            </p>
-            <button onclick="go_1()">Нажмите на меня!</button>
-        </li>
-        <li>
-            <p id="p2">
-                При нажатии на кнопку текст в абзаце поменяется.
-            </p>
-            <button onclick="go_2()">Нажмите на меня!</button>
-        </li>
-        <li>
-            <p id="p3">
-                При нажатии на кнопку абзац станет h3, но текст останется.
-            </p>
-            <button onclick="go_3()">Нажмите на меня!</button>
-        </li>
-        <li>
-            <input type="text" id="a4" placeholder="1st number">
-            +
-            <input type="text" id="b4" placeholder="2nd number">
-            =
-            <span id="result4"></span>
-            <br><br>
-            <button onclick="go_4(document.getElementById('a4').value, document.getElementById('b4').value)">Нажмите чтобы сложить</button>
-        </li>
-        <li>
-            <p>
-                При нажатии на кнопку текст в каждом абзаце поменяется.
-            </p>
-            <p>
-                При нажатии на кнопку текст в каждом абзаце поменяется.
-            </p>
-            <p>
-                При нажатии на кнопку текст в каждом абзаце поменяется.
-            </p>
-            <p>
-                При нажатии на кнопку текст в каждом абзаце поменяется.
-            </p>
-            <h2>
-                А я h2 и не поменяюсь!
-            </h2>
-            <button onclick="go_5()">Нажмите на меня!</button>
-        </li>
-        <li>
-            <h2 class="www">
-                Заголовок с классом www.
-            </h2>
-            <p class="www">
-                Абзац с классом www.
-            </p>
-            <p class="www">
-                Абзац с классом www.
-            </p>
-            <p>
-                Просто абзац, не поменяется.
-            </p>
-            <button onclick="go_6()">Нажмите на меня!</button>
-        </li>
-        <li id="block_7">
-            <h2 class="www">
-                Заголовок с классом www, не поменяется.
-            </h2>
-            <p class="www">
-                Абзац с классом www.
-            </p>
-            <p class="www">
-                Абзац с классом www.
-            </p>
-            <p class="www">
-                Абзац с классом www.
-            </p>
-            <p>
-                Просто абзац, не поменяется.
-            </p>
-            <button onclick="go_7()">Нажмите на меня!</button>
-        </li>
-        <li>
-            <p id="p8" class="my-class">
-                Абзац с class="my-class".
-            </p>
-            <button onclick="go_8()">Нажми - и я выведу класс абзаца.</button>
-        </li>
-        <li>
-            <p id="p9" class="my-class-9">
-                Абзац с class="my-class". Класс задает красный цвет.
-            </p>
-            <button onclick="go_9('get')">Нажми - и я выведу класс абзаца.</button>
-            <button onclick="go_9('remove')">Нажми - и я удалю  атрибут class для абзаца.</button>
-        </li>
-        <li>
-            <p id="p10" class="my-class-10 class">
-                Абзац с class="my-class". Класс задает красный цвет.
-            </p>
-            <button onclick="go_10('get')">Нажми - и я выведу класс абзаца.</button>
-            <button onclick="go_10('set')">Нажми - и я изменю  атрибут class для абзаца.</button>
-        </li>
-        <li>
-            <input type="text" id="input 11" placeholder="Введите в меня текст!" onkeyup=go_11(this)>
-            <span id="span11"></span>
-        </li>
-        <li>
-            <p>
-                По ссылкам не переходите, нажмите на кнопку.
-            </p>
-            <a href="http://google.ru">ссылка 1</a><br><br>
-            <a href="http://tut.by">ссылка 2</a><br><br>
-            <a href="http://yandex.ru">ссылка 3</a><br><br>
-            <input type="submit" value="Нажмите на меня!"  onclick="go_12()">
-        </li>
-        <li>
-            <p id="p13">
-                При нажатии на кнопку текст в абзаце поменяется.
-            </p>
-            <button onclick="go_13(this)">Нажмите на меня!</button>
-        </li>
-        <li id="block_14">
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <button onclick="go_14()">Нажмите на меня</button>
-        </li>
-        <li id="block_15">
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <p>Абзац с текстом.</p>
-            <button onclick="go_15()">Нажмите на меня</button>
-        </li>
-    </ol>
+<ol>
+    <li>
+        <p id="p1">
+            При нажатии на кнопку текст в абзаце поменяется.
+        </p>
+        <button id="button1">Нажмите на меня!</button>
+    </li>
+    <li>
+        <p id="p2">
+            При нажатии на кнопку текст в абзаце поменяется.
+        </p>
+        <button id="button2">Нажмите на меня!</button>
+    </li>
+    <li>
+        <p id="p3">
+            При нажатии на кнопку абзац станет h3, но текст останется.
+        </p>
+        <button id="button3">Нажмите на меня!</button>
+    </li>
+    <li>
+        <input id="a4" placeholder="1st number">
+        +
+        <input id="b4" placeholder="2nd number">
+        =
+        <span id="result4"></span>
+        <br><br>
+        <button id="button4">Нажмите чтобы сложить</button>
+    </li>
+    <li id="block5">
+        <p>
+            При нажатии на кнопку текст в каждом абзаце поменяется.
+        </p>
+        <p>
+            При нажатии на кнопку текст в каждом абзаце поменяется.
+        </p>
+        <p>
+            При нажатии на кнопку текст в каждом абзаце поменяется.
+        </p>
+        <p>
+            При нажатии на кнопку текст в каждом абзаце поменяется.
+        </p>
+        <h2>
+            А я h2 и не поменяюсь!
+        </h2>
+        <button id="button5">Нажмите на меня!</button>
+    </li>
+    <li id="block6">
+        <h2 class="www">
+            Заголовок с классом www.
+        </h2>
+        <p class="www">
+            Абзац с классом www.
+        </p>
+        <p class="www">
+            Абзац с классом www.
+        </p>
+        <p>
+            Просто абзац, не поменяется.
+        </p>
+        <button id="button6">Нажмите на меня!</button>
+    </li>
+    <li id="block_7">
+        <h2 class="www">
+            Заголовок с классом www, не поменяется.
+        </h2>
+        <p class="www">
+            Абзац с классом www.
+        </p>
+        <p class="www">
+            Абзац с классом www.
+        </p>
+        <p class="www">
+            Абзац с классом www.
+        </p>
+        <p>
+            Просто абзац, не поменяется.
+        </p>
+        <button id="button7">Нажмите на меня!</button>
+    </li>
+    <li>
+        <p id="p8" class="my-class">
+            Абзац с class="my-class".
+        </p>
+        <button id="button8">Нажми - и я выведу класс абзаца.</button>
+    </li>
+    <li>
+        <p id="p9" class="my-class-9">
+            Абзац с class="my-class". Класс задает красный цвет.
+        </p>
+        <button id="button9-get">Нажми - и я выведу класс абзаца.</button>
+        <button id="button9-remove">Нажми - и я удалю атрибут class для
+            абзаца.
+        </button>
+    </li>
+    <li>
+        <p id="p10" class="my-class-10 class">
+            Абзац с class="my-class". Класс задает красный цвет.
+        </p>
+        <button id="button10-get">Нажми - и я выведу класс абзаца.</button>
+        <button id="button10-set">Нажми - и я изменю атрибут class для
+            абзаца.
+        </button>
+    </li>
+    <li>
+        <input id="button11" placeholder="Введите в меня текст!">
+        <span id="span11"></span>
+    </li>
+    <li>
+        <p>
+            По ссылкам не переходите, нажмите на кнопку.
+        </p>
+        <a href="http://google.ru">ссылка 1</a><br><br>
+        <a href="http://tut.by">ссылка 2</a><br><br>
+        <a href="http://yandex.ru">ссылка 3</a><br><br>
+        <input id="button12" type="submit" value="Нажмите на меня!">
+    </li>
+    <li>
+        <p id="p13">
+            При нажатии на кнопку текст в абзаце поменяется.
+        </p>
+        <button id="button13">Нажмите на меня!</button>
+    </li>
+    <li id="block_14">
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <button id="button14">Нажмите на меня</button>
+    </li>
+    <li id="block_15">
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <button id="button15">Нажмите на меня</button>
+    </li>
+</ol>
 </body>
 </html>

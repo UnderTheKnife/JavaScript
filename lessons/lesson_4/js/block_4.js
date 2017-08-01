@@ -1,22 +1,34 @@
 function task_1(num) {
-    var rezult;
-    switch (num){
-        case 1: {
-            rezult = 'Зима';
-            break;
-        }
-        case 2: {
-            rezult = 'Весна';
-            break;
-        }
-        case 3 :{
-            rezult = 'Лето';
-            break;
-        }
-        case 4: {
-            rezult = 'Осень';
-            break;
-        }
-    }
-    alert(rezult)
+  let result;
+  
+  switch (num) {
+  case 1: {
+    result = 'Зима';
+    break;
+  }
+  case 2: {
+    result = 'Весна';
+    break;
+  }
+  case 3 : {
+    result = 'Лето';
+    break;
+  }
+  case 4: {
+    result = 'Осень';
+    break;
+  }
+  }
+
+  alert(result);
 }
+
+window.addEventListener('load',() => {
+  for (let button = 1; button <= 4; button += 1){
+    window.document.getElementById(`task${button}`).addEventListener('click',
+      () =>{
+        window['task_1'](button);
+      });
+
+  }
+});

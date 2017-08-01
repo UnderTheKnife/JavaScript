@@ -1,125 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>JS-lesson 19</title>
-        <link rel="stylesheet" href="css/styles.css ">
-        <script src="js/index.js"></script>
-    </head>
-    <body>
-        <ol>
-            <li>
-                <button onclick="alert('Привет!')">Нажми на меня!</button>
-            </li>
-            <li>
-                <button onmouseover="alert('Привет!')">Наведи на меня!</button>
-            </li>
-            <li>
-                <button ondblclick="alert('Привет!')">Двойной счелчок по мне!</button>
-            </li>
-            <li>
-                <div class="div1" onmouseleave="alert('Привет!')">Наведи на меня мышь - а потом убери!</div>
-            </li>
-            <li>
-                <input type="text" id="test5" value="Hello!" placeholder="Message">
-                <button onclick="alert(document.getElementById('test5').value)">Нажми на меня!</button>
-            </li>
-            <li>
-                <input type="text" id="test6" value="Hello!" placeholder="Message">
-                <button onclick="document.getElementById('test6').value ='Ой, я поменял свой текст!'">Нажми на меня!</button>
-            </li>
-            <li>
-                <img src="img/block_7,1.jpg" id="img7" alt="">
-                <br>
-                <button onclick="document.getElementById('img7').src = 'img/block_7,2.jpg'">Нажми на меня!</button>
-            </li>
-            <li>
-                <input type="text" value="Нажми на меня!" onclick="alert(this.value)" placeholder="this">
-            </li>
-            <li>
-                <input type="text" value="Нажми на меня!" onclick="this.value = 'Ой, я поменял текст!'" placeholder="this">
-            </li>
-            <li>
-                <input type="text" value="Нажми на меня!" onfocus="go(this)" onblur="stop(this)" placeholder="this">
-            </li>
-            <li>
-                <input type="submit" onclick="this.value = 'Ку-Ку'" value="Нажми на меня!">
-            </li>
-            <li>
-                <input type="submit" onclick="go_12(this)" value="Нажми на меня!">
-            </li>
-            <li>
-                <img src="img/block_7,1.jpg" onmouseover="go_13(this)" onmouseleave="stop_13(this)" alt="">
-            </li>
-            <li>
-                <input type="text" id="test_14" value="Ку-Ку!" placeholder="Ку-Ку">
-                <button onclick="go_14()">Нажми на меня!</button>
-            </li>
-            <li>
-                <input type="text" value="Ку-Ку" id="test_15" placeholder="Ку-Ку">
-                <button onclick="hide_15()">Нажми на меня!</button>
-                <button onclick="show_15()">Нажми потом на меня!</button>
-            </li>
-            <li>
-                <input type="text" value="Ку-ку" id="test_16" placeholder="Ку-Ку"> <br><br>
-                <button onclick="go_16()">Нажми на меня!</button>
-            </li>
-            <li>
-                <input type="submit" onclick="block_17(this)" value="Нажми на меня!" id="block_17">
-                <input type="submit" onclick="unblock_17('button')" value="Нажми чтобы отблокировать элемент" style="display: none;" id="unblock_17">
-            </li>
-            <li>
-                <input type="submit" onclick="go_18(this)" value="0">
-            </li>
-            <li>
-                <input type="text" value="Ку-ку" id="test_19" placeholder="Ку-ку">
-                <button onclick="go_19()">Нажми на меня!</button>
-            </li>
-            <li>
-                <input type="text" value="Ку-ку" id="test_20" class="eee rock baby" placeholder="classes">
-                <button onclick="go_20()">Нажми на меня!</button>
-            </li>
-            <li>
-                <input type="text" value="Привет!" id="test21_1" placeholder="text1">
-                <input type="text" value="Пока!" id="test21_2" placeholder="text2">
-                <button onclick="go_21()">Нажми на меня!</button>
-            </li>
-            <li>
-                <input type="text" value="" placeholder="Введите число!" id="test_22">
-                <input id = "result_22" value = "Здесь появится результат." placeholder= "Здесь появится результат." disabled>
-                <button onclick="go_22()">Нажми на меня!</button>
-            </li>
-            <li>
-                <p>
-                    По нажатию на кнопку в нижнем инпуте появится квадрат числа из верхнего инпута. Если введено не число - должна показаться ошибка.
-                </p>
-                <input type="text" value="" placeholder="Введите число!" id="test_23"><br><br>
-                <input id = "result_23" value = "Здесь появится результат." placeholder= "Здесь появится результат." disabled><br><br>
-                <button onclick="go_23()">Нажми на меня!</button>
-            </li>
-            <li>
-                <input type="submit" onclick="go_24(this)" value="Нажми на меня!">
-            </li>
-            <li>
-                <input type="text" value="" id="input_25" placeholder="input">
-                <br><br>
-                <input type="submit" onclick="add_25('+')" value="Я добавлю +"><br>
-                <input type="submit" onclick="add_25('-')" value="Я добавлю -"><br>
-                <input type="submit" onclick="add_25('/')" value="Я добавлю /"><br>
-                <input type="submit" onclick="add_25('*')" value="Я добавлю *"><br>
-                <br><br>
-                <input type="submit" onclick="add_25('1')" value="1"><br>
-                <input type="submit" onclick="add_25('2')" value="2"><br>
-                <input type="submit" onclick="add_25('3')" value="3"><br>
-                <input type="submit" onclick="add_25('4')" value="4"><br>
-                <input type="submit" onclick="add_25('5')" value="5"><br>
-                <input type="submit" onclick="add_25('6')" value="6"><br>
-                <input type="submit" onclick="add_25('7')" value="7"><br>
-                <input type="submit" onclick="add_25('8')" value="8"><br>
-                <input type="submit" onclick="add_25('9')" value="9"><br>
-                <input type="submit" onclick="add_25('0')" value="0"><br>
-            </li>
-        </ol>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>JS-lesson 19</title>
+    <link rel="stylesheet" href="css/styles.css ">
+    <script src="js/index.js"></script>
+</head>
+<body>
+<ol>
+    <li>
+        <button id="button1">Нажми на меня!</button>
+    </li>
+    <li>
+        <button id="button2">Наведи на меня!</button>
+    </li>
+    <li>
+        <button id="button3">Двойной счелчок по мне!</button>
+    </li>
+    <li>
+        <div id="button4" class="div1">Наведи на меня мышь - а потом убери!
+        </div>
+    </li>
+    <li>
+        <input id="test5" value="Hello!" placeholder="Message">
+        <button id="button5">Нажми на меня!</button>
+    </li>
+    <li>
+        <input id="test6" value="Hello!" placeholder="Message">
+        <button id="button6">Нажми на меня!</button>
+    </li>
+    <li>
+        <img src="img/block_7,1.jpg" id="img7" alt="">
+        <br>
+        <button id="button7">Нажми на меня!</button>
+    </li>
+    <li>
+        <input id="button8" value="Нажми на меня!" placeholder="this">
+    </li>
+    <li>
+        <input id="button9" value="Нажми на меня!" placeholder="this">
+    </li>
+    <li>
+        <input id="button10" value="Нажми на меня!" placeholder="this">
+    </li>
+    <li>
+        <input id="button11" type="submit" value="Нажми на меня!">
+    </li>
+    <li>
+        <input id="button12" type="submit" value="Нажми на меня!">
+    </li>
+    <li>
+        <img id="button13" src="img/block_7,1.jpg" alt="">
+    </li>
+    <li>
+        <input id="test_14" value="Ку-Ку!" placeholder="Ку-Ку">
+        <button id="button14">Нажми на меня!</button>
+    </li>
+    <li>
+        <input id="test_15" value="Ку-Ку" placeholder="Ку-Ку">
+        <button id="button15-1">Нажми на меня!</button>
+        <button id="button15-2">Нажми потом на меня!</button>
+    </li>
+    <li>
+        <input id="test_16" value="Ку-ку" placeholder="Ку-Ку"><br><br>
+        <button id="button16">Нажми на меня!</button>
+    </li>
+    <li>
+        <input id="button17-1" type="submit" value="Нажми на меня!">
+        <input id="button17-2" type="submit"
+               value="Нажми чтобы отблокировать элемент"
+               style="display: none;">
+    </li>
+    <li>
+        <input id="button18" type="submit" value="0">
+    </li>
+    <li>
+        <input id="test_19" value="Ку-ку" placeholder="Ку-ку">
+        <button id="button19">Нажми на меня!</button>
+    </li>
+    <li>
+        <input id="test_20" class="eee rock baby" value="Ку-ку"
+               placeholder="classes">
+        <button id="button20">Нажми на меня!</button>
+    </li>
+    <li>
+        <input id="test21_1" value="Привет!" placeholder="text1">
+        <input id="test21_2" value="Пока!" placeholder="text2">
+        <button id="button21">Нажми на меня!</button>
+    </li>
+    <li>
+        <input id="test_22" value="" placeholder="Введите число!">
+        <input id="result_22" value="Здесь появится результат."
+               placeholder="Здесь появится результат." disabled>
+        <button id="button22">Нажми на меня!</button>
+    </li>
+    <li>
+        <p>
+            По нажатию на кнопку в нижнем инпуте появится квадрат числа из
+            верхнего инпута. Если введено не число - должна показаться ошибка.
+        </p>
+        <input id="test_23" value="" placeholder="Введите число!"><br><br>
+        <input id="result_23" value="Здесь появится результат."
+               placeholder="Здесь появится результат." disabled><br><br>
+        <button id="button23">Нажми на меня!</button>
+    </li>
+    <li>
+        <input id="button24" type="submit" value="Нажми на меня!">
+    </li>
+    <li>
+        <input value="" id="input_25" placeholder="input">
+        <br><br>
+        <input class="button25" type="submit" value="Я добавлю +"><br>
+        <input class="button25" type="submit" value="Я добавлю -"><br>
+        <input class="button25" type="submit" value="Я добавлю /"><br>
+        <input class="button25" type="submit" value="Я добавлю *"><br>
+        <br><br>
+        <input class="button25" type="submit" value="1"><br>
+        <input class="button25" type="submit" value="2"><br>
+        <input class="button25" type="submit" value="3"><br>
+        <input class="button25" type="submit" value="4"><br>
+        <input class="button25" type="submit" value="5"><br>
+        <input class="button25" type="submit" value="6"><br>
+        <input class="button25" type="submit" value="7"><br>
+        <input class="button25" type="submit" value="8"><br>
+        <input class="button25" type="submit" value="9"><br>
+        <input class="button25" type="submit" value="0"><br>
+    </li>
+</ol>
+</body>
 </html>
 

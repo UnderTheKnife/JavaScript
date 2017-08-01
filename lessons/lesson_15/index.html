@@ -1,76 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>JS-lesson 15</title>
-        <script src="js/index.js"></script>
-    </head>
-    <body>
-        <ol>
-            <li>
-                <p>
-                    Сделайте функцию isNumberInRange, которая параметром принимает число и проверяет, что оно больше нуля и меньше 10.
-                    Если это так - пусть функция возвращает true, если не так - false.
-                </p>
-                <form onsubmit="return false;">
-                    <input id="num1" type="text" placeholder="Значение">
-                    <input type="submit" onclick="task_1(document.getElementById('num1').value)" value="Показать результат">
-                </form>
-                <div id="result1" style="display: none"></div>
-            </li>
-            <li>
-                <p>
-                    Дан массив с числами. Запишите в новый массив только те числа, которые больше нуля и меньше 10-ти.
-                    Для этого используйте вспомогательную функцию isNumberInRange из предыдущей задачи.
-                </p>
-                <button id="button2" onclick="task_2()">Показать результат</button>
-                <div id="result2" style="display: none"></div>
-            </li>
-            <li>
-                <p>
-                    Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
-                </p>
-                <form onsubmit="return false;">
-                    <input id="num3" type="text" placeholder="Значение">
-                    <input type="submit" onclick="task_3(document.getElementById('num3').value)" value="Показать результат">
-                </form>
-                <div id="result3"></div>
-            </li>
-            <li>
-                <p>
-                    Найдите все года от 1 до 2017, сумма цифр которых равна 13. Для этого используйте вспомогательную функцию getDigitsSum из предыдущей задачи.
-                </p>
-                <button id="button4" onclick="task_4()">Показать результат</button>
-                <div id="result4" style="display: none"></div>
-            </li>
-            <li>
-                <p>
-                    Сделайте функцию isEven() (even - это четный), которая параметром принимает целое число и проверяет: четное оно или нет.
-                    Если четное - пусть функция возвращает true, если нечетное - false.
-                </p>
-                <form onsubmit="return false;">
-                    <input id="num5" type="text" placeholder="Значение">
-                    <input type="submit" onclick="task_5(document.getElementById('num5').value)" value="Показать результат">
-                </form>
-                <div id="result5" style="display: none"></div>
-            </li>
-            <li>
-                <p>
-                    Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел. Для этого используйте вспомогательную функцию isEven из предыдущей задачи.
-                </p>
-                <button id="button6" onclick="task_6()">Показать результат</button>
-                <div id="result6" style="display: none"></div>
-            </li>
-            <li>
-                <p>
-                    Сделайте функцию getDivisors, которая параметром принимает число и возвращает массив его делителей (чисел, на которое делится данное число).
-                </p>
-                <form onsubmit="return false;">
-                    <input id="num7" type="text" placeholder="Значение">
-                    <input type="submit" onclick="task_7(document.getElementById('num7').value)" value="Показать результат">
-                </form>
-                <div id="result7" style="display: none"></div>
-            </li>
-        </ol>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>JS-lesson 15</title>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<ol>
+    <li>
+        <p>
+            Сделайте функцию isNumberInRange, которая параметром принимает
+            число и проверяет, что оно больше нуля и меньше 10.
+            Если это так - пусть функция возвращает true, если не так - false.
+        </p>
+        <form onsubmit="return false;">
+            <input id="num1" placeholder="Значение">
+            <input id="button1" type="submit" value="Показать результат">
+        </form>
+        <div id="result1"></div>
+    </li>
+    <li>
+        <p>
+            Дан массив с числами. Запишите в новый массив только те числа,
+            которые больше нуля и меньше 10-ти.
+            Для этого используйте вспомогательную функцию isNumberInRange из
+            предыдущей задачи.
+        </p>
+        <button id="button2" onclick="task_2()">Показать результат</button>
+        <div id="result2"></div>
+    </li>
+    <li>
+        <p>
+            Сделайте функцию getDigitsSum (digit - это цифра), которая
+            параметром принимает целое число и возвращает сумму его цифр.
+        </p>
+        <form onsubmit="return false;">
+            <input id="num3" placeholder="Значение">
+            <input id="button3" type="submit" value="Показать результат">
+        </form>
+        <div id="result3"></div>
+    </li>
+    <li>
+        <p>
+            Найдите все года от 1 до 2017, сумма цифр которых равна 13. Для
+            этого используйте вспомогательную функцию getDigitsSum из
+            предыдущей задачи.
+        </p>
+        <button id="button4" onclick="task_4()">Показать результат</button>
+        <div id="result4"></div>
+    </li>
+    <li>
+        <p>
+            Сделайте функцию isEven() (even - это четный), которая параметром
+            принимает целое число и проверяет: четное оно или нет.
+            Если четное - пусть функция возвращает true, если нечетное - false.
+        </p>
+        <form onsubmit="return false;">
+            <input id="num5" placeholder="Значение">
+            <input id="button5" type="submit" value="Показать результат">
+        </form>
+        <div id="result5"></div>
+    </li>
+    <li>
+        <p>
+            Дан массив с целыми числами. Создайте из него новый массив, где
+            останутся лежать только четные из этих чисел. Для этого используйте
+            вспомогательную функцию isEven из предыдущей задачи.
+        </p>
+        <button id="button6" onclick="task_6()">Показать результат</button>
+        <div id="result6"></div>
+    </li>
+    <li>
+        <p>
+            Сделайте функцию getDivisors, которая параметром принимает число и
+            возвращает массив его делителей (чисел, на которое делится данное
+            число).
+        </p>
+        <form onsubmit="return false;">
+            <input id="num7" placeholder="Значение">
+            <input id="button7" type="submit" value="Показать результат">
+        </form>
+        <div id="result7" style="display: none"></div>
+    </li>
+</ol>
+</body>
 </html>

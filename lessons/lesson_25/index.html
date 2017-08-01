@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/index.js"></script>
     </head>
-    <body onload="onload()">
+    <body>
         <div id="header">
             <div id="elem">
                 #elem
@@ -49,14 +49,14 @@
                     Дан элемент #elem с границами. По нажатию на кнопку выведите
                     толщину его верхней границы.
                 </p>
-                <button onclick="block1()">Click!</button>
+                <button id="button1">Click!</button>
             </li>
             <li>
                 <p>
                     Дан элемент #elem с границами. По нажатию на кнопку выведите
                     толщину его левой границы.
                 </p>
-                <button onclick="block2()">Click!</button>
+                <button id="button2">Click!</button>
                 <br><br>
             </li>
             На полный размер элемента
@@ -65,7 +65,7 @@
                     Дан элемент #elem с границами. По нажатию на кнопку выведите
                     его полную ширину с учетом границы и padding.
                 </p>
-                <button onclick="block3()">Click!</button>
+                <button id="button3">Click!</button>
                 <br>
             </li>
             <li>
@@ -73,7 +73,7 @@
                     Дан элемент #elem с границами. По нажатию на кнопку выведите
                     его полную ширину с учетом границы и padding.
                 </p>
-                <button onclick="block4()">Click!</button>
+                <button id="button4">Click!</button>
                 <br><br>
             </li>
             На размер элемента без границ, но с padding
@@ -82,14 +82,14 @@
                     Дан элемент #elem с границами. По нажатию на кнопку выведите
                     его полную ширину без учета границы, но с padding.
                 </p>
-                <button onclick="block5()">Click!</button>
+                <button id="button5">Click!</button>
             </li>
             <li>
                 <p>
                     Дан элемент #elem с границами. По нажатию на кнопку выведите
                     его полную высоту без учета границы, но с padding.
                 </p>
-                <button onclick="block6()">Click!</button>
+                <button id="button6">Click!</button>
                 <br><br>
             </li>
             Работа с getComputedStyle
@@ -98,7 +98,7 @@
                     Дан элемент #elem. Получите его ширину и высоту, без учета
                     границы и padding.
                 </p>
-                <button onclick="block7()">Click!</button>
+                <button id="button7">Click!</button>
                 <br><br>
             </li>
             Прокрутка элемента
@@ -107,28 +107,28 @@
                     Дан элемент #elem с вертикальной полосой прокрутки. По нажатию
                     на кнопку выведите на сколько элемент прокручен сверху.
                 </p>
-                <button onclick="block8()">Click!</button>
+                <button id="button8">Click!</button>
             </li>
             <li>
                 <p>
                     Дан элемент #elem с горизонтальной полосой прокрутки. По нажатию
                     на кнопку выведите на сколько элемент прокручен слева.
                 </p>
-                <button onclick="block9()">Click!</button>
+                <button id="button9">Click!</button>
             </li>
             <li>
                 <p>
                     Дан элемент #elem с вертикальной полосой прокрутки. По нажатию
                     на кнопку прокрутите его до позиции 100px сверху.
                 </p>
-                <button onclick="block10()">Click!</button>
+                <button id="button10">Click!</button>
             </li>
             <li>
                 <p>
                     Дан элемент #elem с вертикальной полосой прокрутки. По нажатию
                     на кнопку прокрутите его на 100px вниз от текущего положения.
                 </p>
-                <button onclick="block11()">Click!</button>
+                <button id="button11">Click!</button>
                 <br><br>
             </li>
             Прокрутка элемента
@@ -137,21 +137,21 @@
                     Дан элемент #elem с вертикальной полосой прокрутки. По нажатию
                     на кнопку выведите реальную высоту элемента с учетом прокрутки.
                 </p>
-                <button onclick="block12()">Click!</button>
+                <button id="button12">Click!</button>
             </li>
             <li>
                 <p>
                     Дан элемент #elem с горизонтальной полосой прокрутки. По нажатию
                     на кнопку выведите реальную ширину элемента с учетом прокрутки.
                 </p>
-                <button onclick="block13()">Click!</button>
+                <button id="button13">Click!</button>
             </li>
             <li>
                 <p>
                     Дан элемент #elem с вертикальной полосой прокрутки. По нажатию
                     на кнопку прокрутите его до позиции 100px от нижнего края элемента.
                 </p>
-                <button onclick="block14()">Click!</button>
+                <button id="button14">Click!</button>
                 <br><br>
             </li>
             Прокрутка страницы
@@ -160,54 +160,54 @@
                     Дана страница с вертикальной полосой прокрутки. По нажатию на
                     кнопку узнайте на сколько страница прокручена по вертикали.
                 </p>
-                <button onclick="block15()">Click!</button>
+                <button id="button15">Click!</button>
             </li>
             <li>
                 <p>
                     Дана страница с горизонтальной полосой прокрутки. По нажатию
                     на кнопку узнайте на сколько страница прокручена по горизонтали.
                 </p>
-                <button onclick="block16()">Click!</button>
+                <button id="button16">Click!</button>
             </li>
             <li>
                 <p>
                     Дана страница с горизонтальной и вертикальной полосами прокрутки.
                     По нажатию на кнопку прокрутите ее в точку 300px слева, 500px сверху.
                 </p>
-                <button onclick="block17()">Click!</button>
+                <button id="button17">Click!</button>
             </li>
             <li>
                 <p>
                     Дана страница с вертикальной полосой прокрутки. По нажатию на кнопку
                     прокрутите на 300px вниз от текущего положения.
                 </p>
-                <button onclick="block18()">Click!</button>
+                <button id="button18">Click!</button>
             </li>
             Практика
             <li>
                 <p>
                     По нажатию на кнопку прокрутите страницу до самого низа.
                 </p>
-                <button onclick="block19()">Click!</button>
+                <button id="button19">Click!</button>
             </li>
             <li>
                 <p>
                     По нажатию на кнопку прокрутите страницу на 400px от текущего положения.
                 </p>
-                <button onclick="block20()">Click!</button>
+                <button id="button20">Click!</button>
             </li>
             <li>
                 <p>
                     По нажатию на кнопку проверьте, прокручена ли страница до самого низа.
                     Если это так - прокрутите ее в положение 100px от верхнего края.
                 </p>
-                <button onclick="block21()">Click!</button>
+                <button id="button21">Click!</button>
             </li>
             <li>
                 <p>
                     Дан элемент #elem. По клику на него увеличьте его ширину и высоту в 2 раза.
                 </p>
-                <button onclick="block22()">Click!</button>
+                <button id="button22">Click!</button>
             </li>
         </ol>
     </body>

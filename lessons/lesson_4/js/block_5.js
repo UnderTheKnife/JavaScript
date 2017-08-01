@@ -1,62 +1,110 @@
-function task_1(day) {
-    var decade;
-    if (day <= 10 ) {
-        decade = 1;
-    } else if (day >= 11 && day <=20) {
-        decade = 2;
-    } else if (day >= 21 && day <=30) {
-        decade = 3;
-    } else {
-        decade = 'Unknown';
-    }
-    alert('Декада : ' + decade);
+function task_1() {
+  const day = document.getElementById('day').value;
+  let decade;
+
+  if (day <= 10) {
+    decade = 1;
+  } else if (day >= 11 && day <= 20) {
+    decade = 2;
+  } else if (day >= 21 && day <= 31) {
+    decade = 3;
+  } else {
+    decade = 'Unknown';
+  }
+
+  alert(`Декада : ${decade}`);
 }
 
-function task_2(month) {
-    var result;
-    if (parseInt(month) === 12 || month <= 2) {
-        result = 'Зима';
-    } else if (month >= 3 && month <= 5) {
-        result = 'Весна';
-    } else if (month >= 6 && month <= 8) {
-        result = 'Лето';
-    } else if (month >= 9 && month <= 11) {
-        result = 'Осень';
-    } else {
-        result = 'Unknown';
-    }
-    alert('Пора года : ' + result);
+function task_2() {
+  const month = parseInt(document.getElementById('month').value, 10);
+  let result;
+
+  if (month === 12 || month <= 2) {
+    result = 'Зима';
+  } else if (month >= 3 && month <= 5) {
+    result = 'Весна';
+  } else if (month >= 6 && month <= 8) {
+    result = 'Лето';
+  } else if (month >= 9 && month <= 11) {
+    result = 'Осень';
+  } else {
+    result = 'Unknown';
+  }
+
+  alert('Пора года : ' + result);
 }
 
-function task_3(str) {
-    (str[0] === 'a') ? alert('Да!') : alert('Нет!');
+function task_3() {
+  const str = document.getElementById('string').value;
+  let answer = (str[0] === 'a') ? 'Да!' : 'Нет!';
+
+  alert(answer);
 }
 
-function task_4(str, number) {
-    if (!isNaN(str)) {
-        (parseInt(str[0]) === number) ? alert('Да!') : alert('Нет!');
-    } else {
-        alert('Строка должна содержать число!');
-    }
+function task_4(number) {
+  const str = document.getElementById('string2').value;
+  let answer = '';
+
+  if (!isNaN(str)) {
+    answer = (parseInt(str[0]) === number) ? 'Да!' : 'Нет!';
+  } else {
+    answer = 'Строка должна содержать число!';
+  }
+
+  alert(answer);
 }
 
-function task_5(str) {
-    var numbers = str.split(""),
-        result = 0;
-    if (!isNaN(str) && str.length === 3) {
-        numbers.forEach(function(element){
-            result += parseInt(element);
+function task_5() {
+  const str = document.getElementById('string3').value;
+  const numbers = str.split('');
+  let result = 0;
+
+  if (!isNaN(str) && str.length === 3) {
+
+    numbers.forEach(function (element) {
+      result += parseInt(element);
+    });
+
+  } else {
+    result = 'Строка должна содержать 3-х значное число!';
+  }
+
+  alert(result);
+}
+
+function task_6() {
+  const str = document.getElementById('string4').value;
+  let first = parseInt(str[0]) + parseInt(str[1]) + parseInt(str[2]);
+  let second = parseInt(str[3]) + parseInt(str[4]) + parseInt(str[5]);
+  let answer;
+
+  if (!isNaN(str) && str.length === 6) {
+    answer = (first === second) ? 'Да!' : 'Нет!';
+  } else {
+    answer = 'Строка должна содержать 6-ти значное число!';
+  }
+
+  alert(answer);
+}
+
+window.addEventListener('load', () => {
+  const values = [1, 2, 3];
+  let elements;
+
+  for (let block = 1; block <= 6; block += 1) {
+    elements = window.document.getElementsByClassName(`task${block}`);
+
+    if (elements.length > 1) {
+
+      for (let button = 0; button < elements.length; button += 1) {
+        elements[button].addEventListener('click', () => {
+          window[`task_${block}`](values[button]);
         });
-        alert(result);
-    } else {
-        alert('Строка должна содержать 3-х значное число!');
-    }
-}
+      }
 
-function task_6(str) {
-    if (!isNaN(str) && str.length === 6) {
-        ((str[0] + str[1] + str[2]) === (str[3] + str[4] + str[5])) ? alert('Да!') : alert('Нет!');
     } else {
-        alert('Строка должна содержать 6-ти значное число!');
+      elements[0].addEventListener('click', window[`task_${block}`]);
     }
-}
+
+  }
+});

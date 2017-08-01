@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "lessons from http://theory.phphtml.net/tasks/javascript/",
   "scripts": {
-    "server": "http-server -a localhost -p 8000 -o"
+    "start": "http-server -a localhost -p 8000 -o"
   },
   "devDependencies": {
     "http-server": "^0.10.0"

@@ -1,48 +1,63 @@
-function display(num, answer, fields){
-    var result = document.getElementById('result'+num),
-        field;
-    fields.forEach(function (element ){
-        field = document.getElementById(element + num);
-        field.value = '';
-    } );
-    result.innerHTML = answer;
+function display(num, answer, fields) {
+  let result = document.getElementById(`result${num}`);
+  let field;
+
+  fields.forEach(function (element) {
+    field = document.getElementById(element + num);
+    field.value = '';
+  });
+
+  result.innerHTML = answer;
 }
 
-function task_1(a, b) {
-    var answer = a.concat(' = ', b, ' ? : '),
-        fields = ['a', 'b'],
-        num1 = parseInt(a),
-        num2 = parseInt(b);
-    if (a === '' || b === '' || !parseInt(a) || !parseInt(b)){
-        answer = 'Введите число!';
-    } else {
-        (num1 === num2) ? answer += true : answer += false;
-    }
-    display(1, answer, fields);
+function task_1() {
+  const a = parseInt(document.getElementById('a1').value);
+  const b = parseInt(document.getElementById('b1').value);
+  const fields = ['a', 'b'];
+  let answer = `${a} = ${b} ? : `;
+
+  if (!a || !b) {
+    answer = 'Введите число!';
+  } else {
+    answer += (a === b);
+  }
+
+  display(1, answer, fields);
 }
 
-function task_2(a, b) {
-    var answer = a.concat(' + ', b, ' > 10',' ? : '),
-        fields = ['a', 'b'],
-        num1 = parseInt(a),
-        num2 = parseInt(b);
-    if (a === '' || b === '' || !parseInt(a) || !parseInt(b)){
-        answer = 'Введите число!';
-    } else {
-        (num1 + num2 > 10) ? answer += true : answer += false;
-    }
-    display(2, answer, fields);
+function task_2() {
+  const a = parseInt(document.getElementById('a2').value);
+  const b = parseInt(document.getElementById('b2').value);
+  const fields = ['a', 'b'];
+  let answer = `${a} + ${b} > 10 ? : `;
+  let sum = a + b;
+
+  if (!a || !b) {
+    answer = 'Введите число!';
+  } else {
+    answer += (sum > 10);
+  }
+
+  display(2, answer, fields);
 }
 
-function task_3(a) {
-    var answer = a + ' < 0 ? : ',
-        fields = ['a'],
-        num = parseInt(a);
-    if (a === '' || !parseInt(a)){
-        answer = 'Введите число!';
-    } else {
-        (num < 0) ? answer += true : answer += false;
-    }
-    display(3, answer, fields);
+function task_3() {
+  const a = parseInt(document.getElementById('a3').value);
+  const fields = ['a'];
+  let answer = `${a} < 0 ? : `;
+
+  if (!a) {
+    answer = 'Введите число!';
+  } else {
+    answer += (a < 0);
+  }
+  display(3, answer, fields);
 
 }
+
+window.addEventListener('load', () => {
+  for (let button = 1; button <= 3; button += 1) {
+    let element = window.document.getElementById(`button${button}`);
+    element.addEventListener('click', window[`task_${button}`]);
+  }
+});

@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>JS-lesson 17</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <script src="js/index.js"></script>
-    </head>
-    <body>
-        <ol>
-            <li>
-                <p>
-                    Дан массив с числами. Выведите последовательно его элементы используя рекурсию и не используя цикл.
-                </p>
-                <button id="button1" onclick="task_1()">Показать результат</button>
-                <div id="result1"></div>
-            </li>
+<head>
+    <meta charset="UTF-8">
+    <title>JS-lesson 17</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+<ol>
+    <li>
+        <p>
+            Дан массив с числами. Выведите последовательно его элементы
+            используя рекурсию и не используя цикл.
+        </p>
+        <button id="button1">Показать результат</button>
+        <div id="result1"></div>
+    </li>
 
-            <li>
-                <p>
-                    Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее).
-                </p>
-                <form onsubmit="return false;">
-                    <input id="num2" type="text" placeholder="Введите число ">
-                    <input type="submit" onclick="task_2(document.getElementById('num2').value)" value="Показать результат">
-                </form>
-                <div id="result2"></div>
-            </li>
+    <li>
+        <p>
+            Дано число. Сложите его цифры. Если сумма получилась более 9-ти,
+            опять сложите его цифры. И так, пока сумма не станет однозначным
+            числом (9 и менее).
+        </p>
+        <form onsubmit="return false;">
+            <input id="num2" placeholder="Введите число ">
+            <input id="button2" type="submit" value="Показать результат">
+        </form>
+        <div id="result2"></div>
+    </li>
 
-        </ol>
-    </body>
+</ol>
+</body>
 </html>

@@ -11,17 +11,19 @@
                 <p>
                     Даны переменные a = 10 и b = 3. Найдите остаток от деления a на b.
                 </p>
-                <button id="button1" onclick="task_1()">Показать результат</button>
-                <div id="result1" onclick="task_1()"></div>
+                <button id="button1">Показать результат</button>
+                <div id="result1"></div>
             </li>
             <li>
                 <p>
-                    Даны переменные a = 10 и b = 3. Найдите остаток от деления a на b.
+                    Даны переменные a и b. Проверьте, что a делится без остатка
+                    на b. Если это так - выведите 'Делится' и результат деления,
+                    иначе выведите 'Делится с остатком' и остаток от деления.
                 </p>
-                <form>
-                    <input id="a" type="text" title="a">
-                    <input id="b" type="text" title="b">
-                    <input id="button2" type="button" onclick="task_2(document.getElementById('a').value, document.getElementById('b').value)" value="Показать результат">
+                <form onsubmit="return false;">
+                    <input id="a" title="a">
+                    <input id="b" title="b">
+                    <input id="button2" type="submit" value="Показать результат">
                 </form>
                 <div id="result2" onclick="task_2()"></div>
             </li>

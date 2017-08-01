@@ -1,84 +1,116 @@
 function display(num, answer, but) {
-    var result = document.getElementById('result' + num),
-        button = document.getElementById('button' + num);
-    (but === undefined) ? but = true : but;
-    if (but === true) {
-        if (result.style.display === 'none') {
-            result.style.display = 'block';
-            result.innerHTML = answer;
-            button.innerHTML = 'Скрыть результат';
-        } else {
-            result.style.display = 'none';
-            result.innerHTML = '';
-            button.innerHTML = 'Показать результат';
-        }
+  let result = document.getElementById('result' + num);
+  let button = document.getElementById('button' + num);
+
+  but = (but === undefined) ? true : but;
+
+  if (but === true) {
+
+    if (result.style.display === 'none') {
+      result.style.display = 'block';
+      result.innerHTML = answer;
+      button.innerHTML = 'Скрыть результат';
     } else {
-        result.innerHTML = answer;
+      result.style.display = 'none';
+      result.innerHTML = '';
+      button.innerHTML = 'Показать результат';
     }
+
+  } else {
+    result.style.display = 'block';
+    result.innerHTML = answer;
+  }
+
 }
 
 function ucfirst(str) {
-    return str[0].toUpperCase() + str.substr(1);
+  return `${str[0].toUpperCase()}${str.substr(1)}`;
 }
 
 function inArray(str, arr) {
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] === str) {
-            return true;
-        }
+  for (let i = 0; i < arr.length; i++) {
+
+    if (arr[i] === str) {
+      return true;
     }
-    return false;
+
+  }
+  return false;
 }
 
-function task_1(str) {
-    var arr = str.split(' '),
-        newArr = [],
-        answer;
-    if (str === '') {
-        answer = 'Заполните строку!';
-    } else {
-        for (var i = 0; i < arr.length; i++) {
-            newArr.push(ucfirst(arr[i]));
-        }
-        answer = newArr.join(' ');
+function task_1() {
+  const str = document.getElementById('string1').value;
+  let arr = str.split(' ');
+  let newArr = [];
+  let answer;
+
+  if (str === '') {
+    answer = 'Заполните строку!';
+  } else {
+
+    for (let i = 0; i < arr.length; i++) {
+      newArr.push(ucfirst(arr[i]));
     }
-    display(1, answer, false);
+
+    answer = newArr.join(' ');
+  }
+
+  display(1, answer, false);
 }
 
 function task_2() {
-    var str = 'var_text_hello',
-        arr = str.split('_'),
-        newArr = [],
-        newStr;
-    for (var i = 1; i < arr.length; i++) {
-        newArr.push(ucfirst(arr[i]));
-    }
-    newStr = arr[0  ] + newArr.join('');
-    display(2, newStr, false);
+  const str = 'var_text_hello';
+  let arr = str.split('_');
+  let newArr = [];
+  let newStr;
+
+  for (let i = 1; i < arr.length; i++) {
+    newArr.push(ucfirst(arr[i]));
+  }
+
+  newStr = arr[0] + newArr.join('');
+  display(2, newStr, true);
 }
 
-function task_3(str, substr) {
-    var answer;
-    if (str === '' || substr === '') {
-        answer = 'Заполните строки!';
-    } else {
-        var arr = str.split(',');
-        answer = inArray(substr, arr);
-    }
-    display(3, answer, false);
+function task_3() {
+  const str = document.getElementById('string3-1').value;
+  const substr = document.getElementById('string3-2').value;
+  let answer;
+  let arr;
 
+  if (str === '' || substr === '') {
+    answer = 'Заполните строки!';
+  } else {
+    arr = str.split(',');
+    answer = inArray(substr, arr);
+  }
+
+  display(3, answer, false);
 }
 
 function task_4() {
-    var str = '123456',
-        arr = str.split(''),
-        answer;
-    for (var i = 0; i < arr.length; i += 2) {
-        var x;
-        x = arr[i];
-        arr[i] = arr[i+1];
-        arr[i+1] = x;
-    }
-    answer = arr.join('');
-    display(4, answer);
+  const str = '123456';
+  let arr = str.split('');
+  let answer;
+  let x;
+
+  for (let i = 0; i < arr.length; i += 2) {
+    x = arr[i];
+    arr[i] = arr[i + 1];
+    arr[i + 1] = x;
+  }
+
+  answer = arr.join('');
+  display(4, answer);
 }
+
+window.addEventListener('load', () => {
+
+  for (let id = 1; id <= 4; id += 1) {
+    let result = document.getElementById(`result${id}`);
+    let element = window.document.getElementById(`button${id}`);
+    element.addEventListener('click', window[`task_${id}`]);
+    result.style.display = 'none';
+  }
+
+});

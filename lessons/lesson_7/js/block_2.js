@@ -1,78 +1,101 @@
-task_1.num = 0;
+let numTask1 = 0;
+let numTask2 = 0;
+let numTask3 = 0;
+let numTask4 = 0;
+
 function task_1() {
-    var result = document.getElementById('result1'),
-        button = document.getElementById('button1');
-    task_1.num++;
-    if (task_1.num % 2 !== 0 ) {
-        result.style.display = 'block';
-        result.innerHTML = 'я учу javascript!'.length;
-        button.innerHTML = 'Скрыть результат';
-    } else {
-        result.style.display = 'none';
-        result.innerHTML = '';
-        button.innerHTML = 'Показать результат';
+  const result = document.getElementById('result1');
+  const button = document.getElementById('button1');
 
-    }
+  numTask1 += 1;
+
+  if (numTask1 % 2 !== 0) {
+    result.style.display = 'block';
+    result.innerHTML = 'я учу javascript!'.length;
+    button.innerHTML = 'Скрыть результат';
+
+  } else {
+    result.style.display = 'none';
+    result.innerHTML = '';
+    button.innerHTML = 'Показать результат';
+  }
 }
 
-task_2.num = 0;
 function task_2() {
-    var result = document.getElementById('result2'),
-        button = document.getElementById('button2'),
-        str = 'я учу javascript!';
-    task_2.num++;
-    if (task_2.num % 2 !== 0 ) {
-        result.style.display = 'block';
-        result.innerHTML += 'Substr : ' + str.substr(1, 4) + '<br>';
-        result.innerHTML += 'Substring : ' + str.substring(2, 6) + '<br>';
-        result.innerHTML += 'Slice : ' + str.slice(1, 5) + '<br>';
-        button.innerHTML = 'Скрыть результат';
-    } else {
-        result.style.display = 'none';
-        result.innerHTML = '';
-        button.innerHTML = 'Показать результат';
+  const result = document.getElementById('result2');
+  const button = document.getElementById('button2');
+  const str = 'я учу javascript!';
+  let substr = str.substr(1, 4);
+  let substring = str.substring(2, 6);
+  let slice = str.slice(1, 5);
 
-    }
+  numTask2 += 1;
+
+  if (numTask2 % 2 !== 0) {
+    result.style.display = 'block';
+    result.innerHTML += `Substr : ${str.substr(1, 4)} <br>`;
+    result.innerHTML += `Substring : ${str.substring(2, 6)} <br>`;
+    result.innerHTML += `Slice : ${str.slice(1, 5)} <br>`;
+    button.innerHTML = 'Скрыть результат';
+
+  } else {
+    result.style.display = 'none';
+    result.innerHTML = '';
+    button.innerHTML = 'Показать результат';
+
+  }
 }
 
-task_3.num = 0;
 function task_3() {
-    var result = document.getElementById('result3'),
-        button = document.getElementById('button3');
-    task_3.num++;
-    if (task_3.num % 2 !== 0 ) {
-        result.style.display = 'block';
-        result.innerHTML = 'я учу javascript!'.indexOf('учу');
-        button.innerHTML = 'Скрыть результат';
-    } else {
-        result.style.display = 'none';
-        result.innerHTML = '';
-        button.innerHTML = 'Показать результат';
+  const result = document.getElementById('result3');
+  const button = document.getElementById('button3');
+  let position = 'я учу javascript!'.indexOf('учу');
 
-    }
+  numTask3 += 1;
+
+  if (numTask3 % 2 !== 0) {
+    result.style.display = 'block';
+    result.innerHTML = position;
+    button.innerHTML = 'Скрыть результат';
+
+  } else {
+    result.style.display = 'none';
+    result.innerHTML = '';
+    button.innerHTML = 'Показать результат';
+  }
 }
 
-task_4.num = 0;
 function task_4() {
-    var result = document.getElementById('result4'),
-        button = document.getElementById('button4'),
-        str = 'я учу javascript!',
-        n = 10,
-        res;
-    task_4.num++;
-    if (task_4.num % 2 !== 0 ) {
-        result.style.display = 'block';
-        if (str.length > n) {
-            res = str.substr(0, n) + '...';
-        } else {
-            res = str;
-        }
-        result.innerHTML = res;
-        button.innerHTML = 'Скрыть результат';
-    } else {
-        result.style.display = 'none';
-        result.innerHTML = '';
-        button.innerHTML = 'Показать результат';
+  const result = document.getElementById('result4');
+  const button = document.getElementById('button4');
+  const str = 'я учу javascript!';
+  const n = 10;
+  let res;
 
+  numTask4 += 1;
+
+  if (numTask4 % 2 !== 0) {
+    result.style.display = 'block';
+
+    if (str.length > n) {
+      res = str.substr(0, n) + '...';
+    } else {
+      res = str;
     }
+
+    result.innerHTML = res;
+    button.innerHTML = 'Скрыть результат';
+
+  } else {
+    result.style.display = 'none';
+    result.innerHTML = '';
+    button.innerHTML = 'Показать результат';
+  }
 }
+
+window.addEventListener('load', () => {
+  window.document.getElementById('button1').addEventListener('click', task_1);
+  window.document.getElementById('button2').addEventListener('click', task_2);
+  window.document.getElementById('button3').addEventListener('click', task_3);
+  window.document.getElementById('button4').addEventListener('click', task_4);
+});
