@@ -22,5 +22,5 @@ Run on project folder:
 
 For run local server:
 ```
-    npm run server
+    npm start
 ```
