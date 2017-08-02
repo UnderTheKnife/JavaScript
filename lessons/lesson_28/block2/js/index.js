@@ -47,4 +47,3 @@ function add() {
 window.addEventListener('load', () => {
   window.document.getElementById('button1').addEventListener('click', add);
 });
-s

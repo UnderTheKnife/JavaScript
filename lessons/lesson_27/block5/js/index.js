@@ -3,7 +3,8 @@
 /*global window: false */
 
 function go(event) {
-  window.document.getElementById('show').innerHTML = String.fromCharCode(event.which);
+  let answer = String.fromCharCode(event.which);
+  window.document.getElementById('show').innerHTML = answer.toString();
 }
 
 window.addEventListener('load', () => {

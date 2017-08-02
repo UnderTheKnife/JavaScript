@@ -87,7 +87,7 @@ function task4() {
       num += 1;
     }
 
-    document.getElementById('result4').innerHTML = sum;
+    document.getElementById('result4').innerHTML = sum.toString();
     document.getElementById('button4').innerHTML = 'Скрыть результат';
 
   } else {
