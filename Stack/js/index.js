@@ -1,13 +1,11 @@
 /**
- *
+ * Create new 'ul' element
  * @param {object} parent
  * @returns {Element}
  */
 function createUl(parent) {
-  let ul = window.document.createElement('ul');
-  let line = window.document.createElement('hr');
-
-  line.style.margin = '5px';
+  let ul = document.createElement('ul');
+  let line = document.createElement('hr');
 
   parent.appendChild(ul);
   parent.appendChild(line);
@@ -16,17 +14,17 @@ function createUl(parent) {
 }
 
 /**
- *
+ * Show stack
  * @param arr
  */
 function stack(arr) {
-  const parent = window.document.getElementById('stack');
+  const parent = document.getElementById('stack');
   let ul = createUl(parent);
   let count = arr.length;
   let li;
 
   for (let id = 0; id < count; id += 1) {
-    li = window.document.createElement('li');
+    li = document.createElement('li');
     li.innerHTML = arr.pop();
     ul.appendChild(li);
   }
@@ -34,17 +32,17 @@ function stack(arr) {
 }
 
 /**
- *
+ * Show queue
  * @param arr
  */
 function queue(arr) {
-  const parent = window.document.getElementById('queue');
+  const parent = document.getElementById('queue');
   let ul = createUl(parent);
   let count = arr.length;
   let li;
 
   for (let id = 0; id < count; id += 1) {
-    li = window.document.createElement('li');
+    li = document.createElement('li');
     li.innerHTML = arr.shift();
     ul.appendChild(li);
   }
@@ -52,11 +50,11 @@ function queue(arr) {
 }
 
 /**
- *
+ * Push values to array
  * @param {string} func
  */
 function push(func) {
-  const values = window.document.getElementById('values');
+  const values = document.getElementById('values');
   let arr = [];
 
   for (let el = 0; el < values.children.length; el += 1) {
@@ -65,26 +63,29 @@ function push(func) {
     }
   }
 
-  window[func](arr);
+  func(arr);
 }
 
 /**
- *
+ * Add new input
  */
 function add() {
-  const values = window.document.getElementById('values');
-  const button = window.document.getElementById('add');
-  let child = window.document.createElement('input');
+  const values = document.getElementById('values');
+  const button = document.getElementById('add');
+  let child = document.createElement('input');
 
   values.insertBefore(child, button);
 }
 
+/**
+ * Create 'load' event
+ */
 window.addEventListener('load', () => {
-  window.document.getElementById('add').addEventListener('click', add);
-  window.document.getElementById('stackButton').addEventListener('click', () => {
-    push('stack');
+  document.getElementById('add').addEventListener('click', add);
+  document.getElementById('stackButton').addEventListener('click', () => {
+    push(stack);
   });
-  window.document.getElementById('queueButton').addEventListener('click', () => {
-    push('queue');
+  document.getElementById('queueButton').addEventListener('click', () => {
+    push(queue);
   });
 });

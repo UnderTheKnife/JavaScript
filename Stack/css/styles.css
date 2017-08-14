@@ -1,17 +1,17 @@
-#values {
+.values {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#answer {
+.answer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   text-align: center;
 }
 
-#stack, #queue {
+.stack, .queue {
   display: inline-block;
   width: 300px;
 }
@@ -23,4 +23,8 @@ li {
 }
 ul {
   padding: 0;
+}
+
+hr {
+  margin: 5px;
 }
