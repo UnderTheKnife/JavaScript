@@ -1,12 +1,12 @@
 /**
- * show users
+ * Show users
  * @param {string} parent
  */
 function user(parent) {
-  $.each(window.values.users, (userId, user) => {
-    let posts = $(`<div style="display: none"></div>`);
-    let albums = $(`<div style="display: none"></div>`);
-    let userName = $(`<h2 class="well">${user.name}</h2>`);
+  $.each(values.users, (userId, user) => {
+    let posts = $(`<div/>`).hide();
+    let albums = $(`<div/>`).hide();
+    let userName = $('<h2/>').addClass('well').text(user.name);
 
     userName.click(() => {
       posts.toggle();
@@ -15,30 +15,30 @@ function user(parent) {
 
     post(posts, user.id);
     album(albums, user.id);
-    $(parent).append(userName, posts, albums)
+    $(parent).append(userName, posts, albums);
   });
 }
 
 /**
- *  show user posts
+ * Show user posts
  * @param {string} parent
  * @param {number} parentId
  */
 function post(parent, parentId) {
-  let allPosts = $('<h3>Posts</h3>');
-  let posts = $('<div style="display: none"></div>');
+  let allPosts = $('<h3/>').text('Posts');
+  let posts = $('<div/>').hide();
 
-  $.each(window.values.posts, (postId, post) => {
-    if (post['userId'] === parentId) {
-      let postBlock = $('<div class="well post"></div>');
+  $.each(values.posts, (postId, post) => {
+    if (post.userId === parentId) {
+      let postBlock = $('<div/>').addClass('well post');
 
       $(postBlock).append(
-        `<h3>${post.title}</h3>
-          <p>${post.body}</p>`
+        $('<h3/>').text(post.title),
+        $('<p/>').text(post.body)
       );
 
-      comment(postBlock, post['id']);
-      $(posts).append(postBlock)
+      comment(postBlock, post.id);
+      $(posts).append(postBlock);
     }
   });
 
@@ -47,46 +47,46 @@ function post(parent, parentId) {
 }
 
 /**
- * show user post comments
+ * Show user post comments
  * @param {string} parent
  * @param {number}parentId
  */
 function comment(parent, parentId) {
-  $.each(window.values.comments, (commentId, comment) => {
-    let comments = $(`<div class="well comment"></div>`);
+  $.each(values.comments, (commentId, comment) => {
+    let comments = $('<div/>').addClass('well comment');
 
-    if (comment['postId'] === parentId) {
+    if (comment.postId === parentId) {
 
       $(comments).append(
-        `<h3>${comment['name']}</h3>
-        <p>${comment['email']}</p>
-        <p>${comment['body']}</p>`
+        $('<h3/>').text(comment.name),
+        $('<p/>').text(comment.email),
+        $('<p/>').text(comment.body)
       );
-      $(parent).append(comments)
+      $(parent).append(comments);
     }
   });
 }
 
 /**
- * show user albums
+ * Show user albums
  * @param {string} parent
  * @param {number} parentId
  */
 function album(parent, parentId) {
-  let allAlbums = $('<h3>Albums</h3>');
-  let albums = $('<div style="display: none"></div>');
+  let allAlbums = $('<h3/>').text('Albums');
+  let albums = $('<div/>').hide();
 
-  $.each(window.values.albums, (albumId, album) => {
-    if (album['userId'] === parentId) {
-      let albumBlock = $('<div class="well"></div>');
+  $.each(values.albums, (albumId, album) => {
+    if (album.userId === parentId) {
+      let albumBlock = $('<div/>').addClass('well');
 
       $(albumBlock).append(
-        `<h3>${album['title']}</h3>`
+        $('<h3/>').text(album.title)
       );
 
-      photo(albumBlock, album['id']);
+      photo(albumBlock, album.id);
 
-      $(albums).append(albumBlock)
+      $(albums).append(albumBlock);
     }
   });
 
@@ -95,22 +95,19 @@ function album(parent, parentId) {
 }
 
 /**
- * show user album photos
+ * Show user album photos
  * @param {string} parent
  * @param {number} parentId
  */
 function photo(parent, parentId) {
-  $.each(window.values.photos, (photoId, photo) => {
+  $.each(values.photos, (photoId, photo) => {
 
-    if (photo['albumId'] === parentId) {
-      let img = $(`<img 
-        src="${photo['thumbnailUrl']}"
-        alt="${photo['title']}"
-        title="${photo['title']}
-        ">`
-      );
+    if (photo.albumId === parentId) {
+      let img = $('<img>');
+      img.attr('src', photo.thumbnailUrl);
+      img.attr('title', photo.title);
 
-      $(parent).append(img)
+      $(parent).append(img);
     }
   });
 }
