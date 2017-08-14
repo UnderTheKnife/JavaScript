@@ -1,5 +1,5 @@
 /**
- * clear object value
+ * Clear object value
  * @param {object} element
  */
 function clear(element) {
@@ -7,7 +7,7 @@ function clear(element) {
 }
 
 /**
- * disable object
+ * Disable object
  * @param {object} element
  */
 function disable(element) {
@@ -15,7 +15,7 @@ function disable(element) {
 }
 
 /**
- * enable object
+ * Enable object
  * @param {object} element
  */
 function enabled(element) {
@@ -23,165 +23,158 @@ function enabled(element) {
 }
 
 /**
- * loop function from parameter
+ * Add zeros to result
+ */
+function addZero(element) {
+  element.value = (`0${element.value}`).slice(-2);
+}
+
+/**
+ * Loop function from parameter
  * @param {string} func
  */
 function loop(func) {
-  for (let key in window.get) {
+  for (let key in getValues) {
 
-    if (window.get.hasOwnProperty(key)) {
-      window[func](window.get[key]);
+    if (getValues.hasOwnProperty(key)) {
+      func(getValues[key]);
     }
 
   }
 }
 
 /**
- * get seconds count
+ * Get seconds count
  * @returns {number}
  */
 function getTime() {
   let time = 0;
   let toSeconds = 3600;
 
-  for (let key in window.get) {
+  for (let key in getValues) {
 
-    if (window.get.hasOwnProperty(key)) {
-      time += (parseInt(window.get[key].value) * toSeconds);
+    if (getValues.hasOwnProperty(key)) {
+      console.log(getValues[key].value);
+      time += (parseInt(getValues[key].value) * toSeconds);
       toSeconds /= 60;
+
     }
 
   }
-
   return time;
 }
 
 /**
- * add zeros to result
- */
-function addZero() {
-  for (let key in window.get) {
-
-    if (window.get.hasOwnProperty(key)) {
-
-      if (window.get[key].value === '') {
-        window.get[key].value = '00';
-      }
-
-      if (window.get[key].value < 10 && window.get[key].value !== '00') {
-        window.get[key].value = `0${ window.get[key].value}`;
-      }
-
-    }
-
-  }
-}
-
-/**
- * stop timer
+ * Stop timer
  */
 function stop() {
-  window.clearInterval(window.timerId);
 
-  alert(window.message.value);
+  alert(message.value);
 
-  loop('enabled');
-  window.message.value = '';
-  window.message.style.display = 'inline-block';
-  enabled(window.button);
+  loop(enabled);
+  clear(message);
+  message.style.display = 'inline-block';
+  enabled(button);
+
+  clearInterval(timerId);
+
 }
 
-
 /**
- * timer
+ * Timer
  */
 function timer() {
   let time = getTime();
-  let hours;
-  let minutes;
-  let seconds;
+  let hours = 0;
+  let minutes = 0;
+  let seconds = 0;
 
-  if (time !== 0) {
+  if (time > 0) {
     time -= 1;
 
     hours = time / 3600 ^ 0;
     minutes = (time - hours * 3600) / 60 ^ 0;
     seconds = time - hours * 3600 - minutes * 60;
 
-    window.get.hours.value = hours;
-    window.get.minutes.value = minutes;
-    window.get.seconds.value = seconds;
+    getValues.hours.value = hours;
+    getValues.minutes.value = minutes;
+    getValues.seconds.value = seconds;
 
-    addZero();
+    loop(addZero);
   } else {
     stop();
   }
 }
 
 /**
- * check for errors
+ * Check for errors
  * @returns {string}
  */
 function isError() {
-  let error = 'none';
-  for (let key in window.get) {
-    if (window.get.hasOwnProperty(key)) {
+  let error = '';
+  for (let key in getValues) {
+    if (getValues.hasOwnProperty(key)) {
 
-      if (window.message.value === '') {
-        error = 'Введите сообщение!';
+      if (!getValues[key].value) {
+        getValues[key].value = '0';
       }
 
-      if (isNaN(window.get[key].value)) {
-        error = 'Значение дожно быть числом!';
+      if (getValues[key].value >= 60) {
+        error = `Значение '${key}' на может быть больше 60!`;
+      }
+
+      if (isNaN(getValues[key].value)) {
+        error = `Значение '${key}' дожно  быть числом!`;
       }
 
       if (getTime() === 0) {
         error = 'Заполните минимум одно поле!';
       }
 
-      if (window.get[key].value < 0) {
-        error =  'Значение не может быть отрицательным!';
-      }
-
-      if (key !== 'hours' && window.get[key].value >= 60) {
-        error =  'Значение на может быть больше 60!';
+      if (getValues[key].value < 0) {
+        error = `Значение '${key}' не может быть отрицательным!`;
       }
 
     }
+  }
+
+  if (message.value === '') {
+    error = 'Введите сообщение!';
   }
 
   return error;
 }
 
 /**
- * start timer
+ * Start timer
  */
 function start() {
-  addZero();
+  getValues = {
+    'hours': document.getElementById('hours'),
+    'minutes': document.getElementById('minutes'),
+    'seconds': document.getElementById('seconds')
+  };
 
-  if (isError() !== 'none') {
-    alert(isError());
-    loop('clear');
+  if (!isError()) {
+    loop(disable);
+    loop(addZero);
+
+    message.style.display = 'none';
+    disable(button);
+
+    timerId = setInterval(timer, 1000);
   } else {
-    loop('disable');
-    window.message.style.display = 'none';
-    disable(window.button);
-
-    window.timerId = window.setInterval(timer, 1000);
+    alert(isError());
+    loop(clear);
   }
 }
 
 /**
- * add event
+ * Add event
  */
 window.addEventListener('load', () => {
-  window.get = {
-    'hours': window.document.getElementById('hours'),
-    'minutes': window.document.getElementById('minutes'),
-    'seconds': window.document.getElementById('seconds')
-  };
-  window.message = window.document.getElementById('message');
-  window.button = window.document.getElementById('start');
+  message = document.getElementById('message');
+  button = document.getElementById('start');
 
-  window.button.addEventListener('click', start);
+  button.addEventListener('click', start);
 });
