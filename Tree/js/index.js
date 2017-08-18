@@ -3,6 +3,13 @@
  */
 function clearAndBuild() {
   $('.tree').empty();
+
+  elements.forEach((element) => {
+    if (element.level > max) {
+      max = element.level;
+    }
+  });
+
   building();
 }
 
@@ -17,12 +24,12 @@ function building(currentLevel, parent) {
 
   elements.forEach((element) => {
     if (element.level === currentLevel && parent === element.parentId) {
-      let ul = $('<ul/>');
-      let li = $('<li/>');
-      let content = $('<div/>');
-      let arrow = $('<div/>');
-      let image = $('<div/>');
-      let name = $('<div/>').text(element.name);
+      const ul = $('<ul/>');
+      const li = $('<li/>');
+      const content = $('<div/>');
+      const arrow = $('<div/>');
+      const image = $('<div/>');
+      const name = $('<div/>').text(element.name);
 
       ul.addClass('opened');
       ul.addClass(`${element.id}`);

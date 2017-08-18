@@ -1,5 +1,5 @@
-currentItem = '';
-elements = [
+let currentItem = '';
+let elements = [
   {
     id: 'tree0',
     level: 0,
@@ -54,9 +54,4 @@ elements = [
     type: 'file'
   }
 ];
-max = 0;
-elements.forEach((element) => {
-  if (element.level > max) {
-    max = element.level;
-  }
-});
+let max = 0;
