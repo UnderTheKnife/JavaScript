@@ -11,7 +11,7 @@ function clear(element) {
  * @param {object} element
  */
 function disable(element) {
-  element.setAttribute('disabled', 'disabled');
+  element.setAttribute('disabled', '');
 }
 
 /**
@@ -36,10 +36,7 @@ function addZero(element) {
 function loop(func) {
   for (let key in getValues) {
 
-    if (getValues.hasOwnProperty(key)) {
-      func(getValues[key]);
-    }
-
+    func(getValues[key]);
   }
 }
 
@@ -52,14 +49,8 @@ function getTime() {
   let toSeconds = 3600;
 
   for (let key in getValues) {
-
-    if (getValues.hasOwnProperty(key)) {
-      console.log(getValues[key].value);
-      time += (parseInt(getValues[key].value) * toSeconds);
-      toSeconds /= 60;
-
-    }
-
+    time += (parseInt(getValues[key].value) * toSeconds);
+    toSeconds /= 60;
   }
   return time;
 }
@@ -68,16 +59,12 @@ function getTime() {
  * Stop timer
  */
 function stop() {
-
   alert(message.value);
-
   loop(enabled);
   clear(message);
-  message.style.display = 'inline-block';
   enabled(button);
-
   clearInterval(timerId);
-
+  message.removeAttribute('disabled');
 }
 
 /**
@@ -113,28 +100,25 @@ function timer() {
 function isError() {
   let error = '';
   for (let key in getValues) {
-    if (getValues.hasOwnProperty(key)) {
 
-      if (!getValues[key].value) {
-        getValues[key].value = '0';
-      }
+    if (!getValues[key].value) {
+      getValues[key].value = '0';
+    }
 
-      if (getValues[key].value >= 60) {
-        error = `Значение '${key}' на может быть больше 60!`;
-      }
+    if (getValues[key].value >= 60) {
+      error = `Значение '${key}' на может быть больше 60!`;
+    }
 
-      if (isNaN(getValues[key].value)) {
-        error = `Значение '${key}' дожно  быть числом!`;
-      }
+    if (isNaN(getValues[key].value)) {
+      error = `Значение '${key}' дожно  быть числом!`;
+    }
 
-      if (getTime() === 0) {
-        error = 'Заполните минимум одно поле!';
-      }
+    if (getTime() === 0) {
+      error = 'Заполните минимум одно поле!';
+    }
 
-      if (getValues[key].value < 0) {
-        error = `Значение '${key}' не может быть отрицательным!`;
-      }
-
+    if (getValues[key].value < 0) {
+      error = `Значение '${key}' не может быть отрицательным!`;
     }
   }
 
@@ -159,7 +143,7 @@ function start() {
     loop(disable);
     loop(addZero);
 
-    message.style.display = 'none';
+    message.setAttribute("disabled", "");
     disable(button);
 
     timerId = setInterval(timer, 1000);
