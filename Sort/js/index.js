@@ -1,17 +1,16 @@
+let mainArray = [];
 /**
  * Generate new random array
  */
 function getArray() {
-  mainArray = [];
   let element = 0;
 
   for (let i = 0; i < 10; i += 1) {
     element = Math.floor((Math.random() * 100) + 1);
-    mainArray.push(element);
+    mainArray[i] = element;
   }
 
   document.getElementById('array').innerHTML = mainArray;
-
 }
 
 /**
@@ -34,12 +33,9 @@ function bubbleSort() {
         array[j] = tmp;
 
       }
-
     }
   }
-
   alert(`Bubble : ${array}`);
-
 }
 
 /**
@@ -62,9 +58,7 @@ function insertionSort() {
 
     array[num + 1] = value;
   }
-
   alert(`Insertion : ${array}`);
-
 }
 
 /**
@@ -89,12 +83,9 @@ function shellSort() {
 
       array[current] = tmp;
     }
-
     step = Math.floor(step / 2);
   }
-
   alert(`Shell : ${array}`);
-
 }
 
 /**
