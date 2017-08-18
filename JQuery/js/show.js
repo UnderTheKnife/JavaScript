@@ -3,7 +3,7 @@
  * @param {string} parent
  */
 function user(parent) {
-  $.each(window.values.users, (userId, user) => {
+  $.each(values.users, (userId, user) => {
     let posts = $(`<div style="display: none"></div>`);
     let albums = $(`<div style="display: none"></div>`);
     let userName = $(`<h2 class="well">${user.name}</h2>`);
@@ -28,7 +28,7 @@ function post(parent, parentId) {
   let allPosts = $('<h3>Posts</h3>');
   let posts = $('<div style="display: none"></div>');
 
-  $.each(window.values.posts, (postId, post) => {
+  $.each(values.posts, (postId, post) => {
     if (post['userId'] === parentId) {
       let postBlock = $('<div class="well post"></div>');
 
@@ -52,7 +52,7 @@ function post(parent, parentId) {
  * @param {number}parentId
  */
 function comment(parent, parentId) {
-  $.each(window.values.comments, (commentId, comment) => {
+  $.each(values.comments, (commentId, comment) => {
     let comments = $(`<div class="well comment"></div>`);
 
     if (comment['postId'] === parentId) {
@@ -76,7 +76,7 @@ function album(parent, parentId) {
   let allAlbums = $('<h3>Albums</h3>');
   let albums = $('<div style="display: none"></div>');
 
-  $.each(window.values.albums, (albumId, album) => {
+  $.each(values.albums, (albumId, album) => {
     if (album['userId'] === parentId) {
       let albumBlock = $('<div class="well"></div>');
 
@@ -100,7 +100,7 @@ function album(parent, parentId) {
  * @param {number} parentId
  */
 function photo(parent, parentId) {
-  $.each(window.values.photos, (photoId, photo) => {
+  $.each(values.photos, (photoId, photo) => {
 
     if (photo['albumId'] === parentId) {
       let img = $(`<img 
