@@ -12,15 +12,12 @@ function searchMin() {
         min = nodes[el].value;
         id = el;
       }
-
     }
     nodes[id].used = true;
 
     searchPath(id);
     paint(true);
-
   }
-
 }
 
 /**
@@ -29,7 +26,6 @@ function searchMin() {
  */
 function searchPath(id) {
   links.forEach((edge) => {
-
     if (edge[0] === id) {
       let x = nodes[id].value + edge[2];
 
@@ -37,9 +33,7 @@ function searchPath(id) {
         nodes[edge[1]].value = x;
         nodes[edge[1]].path = nodes[id].path.concat((edge[1] + 1).toString());
       }
-
     }
-
   });
 }
 
@@ -48,8 +42,8 @@ function searchPath(id) {
  */
 window.addEventListener('load', () => {
   paint();
-  $('#clear').on('click', () => {
+  document.getElementById('clear').addEventListener('click', () => {
     paint(false);
   });
-  $('#search').on('click', searchMin);
+  document.getElementById('search').addEventListener('click', searchMin);
 });

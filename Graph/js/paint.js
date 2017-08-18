@@ -22,7 +22,6 @@ function drawEdges(ctx, pressed) {
   let path = false;
 
   links.forEach((link) => {
-
     let i0 = link[0];
     let i1 = link[1];
     let textX = ((nodes[i0].x + nodes[i1].x) / 2) + 5;
@@ -68,6 +67,7 @@ function drawNodes(ctx, pressed) {
         path = (node.text === element) ? true : path;
       });
     }
+
     ctx.strokeStyle = defaultLinesColor;
     ctx.fillStyle = (path) ? minPathColor : defaultColor;
     ctx.arc(node.x, node.y, 25, 0, 2 * Math.PI);
@@ -80,7 +80,6 @@ function drawNodes(ctx, pressed) {
       ctx.fillStyle = nodeValueColor;
       ctx.fillText(node.value, node.x + 30, node.y);
     }
-
     path = false;
 
   });
