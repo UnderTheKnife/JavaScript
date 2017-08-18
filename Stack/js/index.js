@@ -4,8 +4,8 @@
  * @returns {Element}
  */
 function createUl(parent) {
-  let ul = document.createElement('ul');
-  let line = document.createElement('hr');
+  const ul = document.createElement('ul');
+  const line = document.createElement('hr');
 
   parent.appendChild(ul);
   parent.appendChild(line);
@@ -15,12 +15,12 @@ function createUl(parent) {
 
 /**
  * Show stack
- * @param arr
+ * @param {array} arr
  */
 function stack(arr) {
   const parent = document.getElementById('stack');
-  let ul = createUl(parent);
-  let count = arr.length;
+  const ul = createUl(parent);
+  const count = arr.length;
   let li;
 
   for (let id = 0; id < count; id += 1) {
@@ -33,12 +33,12 @@ function stack(arr) {
 
 /**
  * Show queue
- * @param arr
+ * @param {array} arr
  */
 function queue(arr) {
   const parent = document.getElementById('queue');
-  let ul = createUl(parent);
-  let count = arr.length;
+  const ul = createUl(parent);
+  const count = arr.length;
   let li;
 
   for (let id = 0; id < count; id += 1) {
@@ -72,7 +72,7 @@ function push(func) {
 function add() {
   const values = document.getElementById('values');
   const button = document.getElementById('add');
-  let child = document.createElement('input');
+  const child = document.createElement('input');
 
   values.insertBefore(child, button);
 }

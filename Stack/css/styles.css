@@ -11,7 +11,8 @@
   text-align: center;
 }
 
-.stack, .queue {
+.stack,
+.queue {
   display: inline-block;
   width: 300px;
 }
