@@ -4,9 +4,9 @@
  */
 function user(parent) {
   $.each(values.users, (userId, user) => {
-    let posts = $(`<div/>`).hide();
-    let albums = $(`<div/>`).hide();
-    let userName = $('<h2/>').addClass('well').text(user.name);
+    const posts = $(`<div/>`).hide();
+    const albums = $(`<div/>`).hide();
+    const userName = $('<h2/>').addClass('well').text(user.name);
 
     userName.click(() => {
       posts.toggle();
@@ -25,12 +25,12 @@ function user(parent) {
  * @param {number} parentId
  */
 function post(parent, parentId) {
-  let allPosts = $('<h3/>').text('Posts');
-  let posts = $('<div/>').hide();
+  const allPosts = $('<h3/>').text('Posts');
+  const posts = $('<div/>').hide();
 
   $.each(values.posts, (postId, post) => {
     if (post.userId === parentId) {
-      let postBlock = $('<div/>').addClass('well post');
+      const postBlock = $('<div/>').addClass('well post');
 
       $(postBlock).append(
         $('<h3/>').text(post.title),
@@ -53,7 +53,7 @@ function post(parent, parentId) {
  */
 function comment(parent, parentId) {
   $.each(values.comments, (commentId, comment) => {
-    let comments = $('<div/>').addClass('well comment');
+    const comments = $('<div/>').addClass('well comment');
 
     if (comment.postId === parentId) {
 
@@ -73,12 +73,12 @@ function comment(parent, parentId) {
  * @param {number} parentId
  */
 function album(parent, parentId) {
-  let allAlbums = $('<h3/>').text('Albums');
-  let albums = $('<div/>').hide();
+  const allAlbums = $('<h3/>').text('Albums');
+  const albums = $('<div/>').hide();
 
   $.each(values.albums, (albumId, album) => {
     if (album.userId === parentId) {
-      let albumBlock = $('<div/>').addClass('well');
+      const albumBlock = $('<div/>').addClass('well');
 
       $(albumBlock).append(
         $('<h3/>').text(album.title)
@@ -103,7 +103,7 @@ function photo(parent, parentId) {
   $.each(values.photos, (photoId, photo) => {
 
     if (photo.albumId === parentId) {
-      let img = $('<img>');
+      const img = $('<img>');
       img.attr('src', photo.thumbnailUrl);
       img.attr('title', photo.title);
 
