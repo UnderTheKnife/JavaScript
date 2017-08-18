@@ -36,7 +36,8 @@
   border-bottom: 2px solid black;
 }
 
-.folder, .file {
+.folder,
+.file {
   height: 24px;
   display: flex;
 }
