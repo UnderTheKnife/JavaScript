@@ -1,0 +1,20 @@
+ol {
+  width: 700px;
+  margin: 50px auto;
+}
+
+li {
+  margin: 15px;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+input {
+  width: 300px;
+}
+
+.container {
+  height: 300px;
+  width: 300px;
+  border: 1px solid red;
+}

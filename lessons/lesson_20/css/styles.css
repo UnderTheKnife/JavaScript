@@ -1,0 +1,22 @@
+ol {
+  width: 700px;
+  margin: 50px auto;
+}
+
+li {
+  border: 1px solid black;
+  margin: 15px;
+  padding: 15px;
+}
+
+.my-class-9 {
+  color: #FF0000;
+}
+
+.my-class-10 {
+  color: #FF0000;
+}
+
+.my-class-13 {
+  color: #FF0000;
+}
