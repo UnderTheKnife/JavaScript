@@ -35,7 +35,6 @@ function addZero(element) {
  */
 function loop(func) {
   for (let key in getValues) {
-
     func(getValues[key]);
   }
 }
