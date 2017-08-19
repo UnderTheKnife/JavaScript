@@ -21,7 +21,7 @@ function stack(arr) {
   const parent = document.getElementById('stack');
   const ul = createUl(parent);
   const count = arr.length;
-  let li;
+  let li = {};
 
   for (let id = 0; id < count; id += 1) {
     li = document.createElement('li');
@@ -38,7 +38,7 @@ function queue(arr) {
   const parent = document.getElementById('queue');
   const ul = createUl(parent);
   const count = arr.length;
-  let li;
+  let li = {};
 
   for (let id = 0; id < count; id += 1) {
     li = document.createElement('li');
