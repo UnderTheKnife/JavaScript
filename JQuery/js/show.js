@@ -4,10 +4,11 @@
  */
 function user(parent) {
   $.each(values.users, (userId, user) => {
-    let posts = $(`<div style="display: none"></div>`);
-    let albums = $(`<div style="display: none"></div>`);
-    let userName = $(`<h2 class="well">${user.name}</h2>`);
+    let posts = $('<div/>').addClass('hide');
+    let albums = $('<div/>').addClass('hide');
+    let userName = $('<h2/>').text(user.name);
 
+    userName.addClass('well');
     userName.click(() => {
       posts.toggle();
       albums.toggle();
@@ -25,19 +26,19 @@ function user(parent) {
  * @param {number} parentId
  */
 function post(parent, parentId) {
-  let allPosts = $('<h3>Posts</h3>');
-  let posts = $('<div style="display: none"></div>');
+  let allPosts = $('<h3/>').text('Posts');
+  let posts = $('<div/>').addClass('hide');
 
   $.each(values.posts, (postId, post) => {
-    if (post['userId'] === parentId) {
-      let postBlock = $('<div class="well post"></div>');
+    if (post.userId === parentId) {
+      let postBlock = $('<div/>').addClass('well post');
 
       $(postBlock).append(
         `<h3>${post.title}</h3>
           <p>${post.body}</p>`
       );
 
-      comment(postBlock, post['id']);
+      comment(postBlock, post.id);
       $(posts).append(postBlock)
     }
   });
@@ -53,14 +54,14 @@ function post(parent, parentId) {
  */
 function comment(parent, parentId) {
   $.each(values.comments, (commentId, comment) => {
-    let comments = $(`<div class="well comment"></div>`);
+    let comments = $('<div/>').addClass('well comment');
 
-    if (comment['postId'] === parentId) {
+    if (comment.postId === parentId) {
 
       $(comments).append(
-        `<h3>${comment['name']}</h3>
-        <p>${comment['email']}</p>
-        <p>${comment['body']}</p>`
+        `<h3>${comment.name}</h3>
+        <p>${comment.email}</p>
+        <p>${comment.body}</p>`
       );
       $(parent).append(comments)
     }
@@ -73,18 +74,18 @@ function comment(parent, parentId) {
  * @param {number} parentId
  */
 function album(parent, parentId) {
-  let allAlbums = $('<h3>Albums</h3>');
-  let albums = $('<div style="display: none"></div>');
+  let allAlbums = $('<h3/>').text('Albums');
+  let albums = $('<div/>').addClass('hide');
 
   $.each(values.albums, (albumId, album) => {
-    if (album['userId'] === parentId) {
-      let albumBlock = $('<div class="well"></div>');
+    if (album.userId === parentId) {
+      let albumBlock = $('<div/>').addClass('well');
 
       $(albumBlock).append(
-        `<h3>${album['title']}</h3>`
+        `<h3>${album.title}</h3>`
       );
 
-      photo(albumBlock, album['id']);
+      photo(albumBlock, album.id);
 
       $(albums).append(albumBlock)
     }
@@ -102,11 +103,11 @@ function album(parent, parentId) {
 function photo(parent, parentId) {
   $.each(values.photos, (photoId, photo) => {
 
-    if (photo['albumId'] === parentId) {
+    if (photo.albumId === parentId) {
       let img = $(`<img 
-        src="${photo['thumbnailUrl']}"
-        alt="${photo['title']}"
-        title="${photo['title']}
+        src="${photo.thumbnailUrl}"
+        alt="${photo.title}"
+        title="${photo.title}
         ">`
       );
 
