@@ -16,12 +16,15 @@
   display: inline-block;
   width: 300px;
 }
+
 input {
   text-align: center;
 }
+
 li {
   list-style-type: none;
 }
+
 ul {
   padding: 0;
 }

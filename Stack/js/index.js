@@ -28,7 +28,6 @@ function stack(arr) {
     li.innerHTML = arr.pop();
     ul.appendChild(li);
   }
-
 }
 
 /**
@@ -46,7 +45,6 @@ function queue(arr) {
     li.innerHTML = arr.shift();
     ul.appendChild(li);
   }
-
 }
 
 /**
@@ -62,7 +60,6 @@ function push(func) {
       arr.push(values.children[el].value);
     }
   }
-
   func(arr);
 }
 
