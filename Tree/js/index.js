@@ -4,11 +4,9 @@
 function clearAndBuild() {
   $('.tree').empty();
 
-  elements.forEach((element) => {
-    if (element.level > max) {
-      max = element.level;
-    }
-  });
+  elements.forEach(
+    element => max = element.level > max ? element.level : max
+  );
 
   building();
 }
@@ -19,8 +17,8 @@ function clearAndBuild() {
  * @param {string} parent
  */
 function building(currentLevel, parent) {
-  currentLevel = (currentLevel) ? currentLevel : 0;
-  parent = (parent) ? parent : 'tree';
+  currentLevel = currentLevel || 0;
+  parent = parent || 'tree';
 
   elements.forEach((element) => {
     if (element.level === currentLevel && parent === element.parentId) {
@@ -32,12 +30,17 @@ function building(currentLevel, parent) {
       const name = $('<div/>').text(element.name);
 
       ul.addClass('opened');
-      ul.addClass(`${element.id}`);
+      ul.addClass(element.id);
       content.addClass(`${element.type}`);
+
       name.addClass('name');
       image.addClass(`${element.type}-image image`);
       arrow.addClass(`${element.type}-open image toggle`);
       arrow.addClass(`${element.id}-toggle`);
+
+      arrow.data('id', element.id);
+      arrow.data('type', element.type);
+      name.data('element', element);
 
       content.append(arrow, image, name);
       li.append(content, ul);
@@ -49,18 +52,7 @@ function building(currentLevel, parent) {
         $(`.${element.parentId}`).append(ul);
       }
 
-      $(`.${element.id}-toggle`).on('click', () => {
-        let hide = $(`.${element.id}`);
-        arrow.toggleClass(`${element.type}-open`);
-        arrow.toggleClass(`${element.type}-closed`);
-        hide.toggleClass('opened');
-        hide.toggleClass('closed');
-      });
-      content.on('click', () => {
-        currentItem = element;
-      });
-
-      if ((currentLevel + 1) <= max) {
+      if ((currentLevel) < max) {
         building(currentLevel + 1, element.id);
       }
     }
@@ -120,13 +112,27 @@ function deleteElement(item) {
  */
 $(document).ready(() => {
   clearAndBuild();
-  $('#addFile').on('click', () => {
-    addElement('File')
-  });
-  $('#addFolder').on('click', () => {
-    addElement('Folder')
-  });
-  $('#delete').on('click', () => {
-    deleteElement(currentItem);
-  });
 });
+
+$(document).on('click', '#addFile', () => {
+  addElement('File')
+});
+
+$(document).on('click', '#addFolder', () => {
+  addElement('Folder')
+});
+
+$(document).on('click', '#delete', () => {
+  deleteElement(currentItem);
+});
+
+$(document).on('click', `.toggle`, function() {
+  const element = $(this).data();
+  $(this).toggleClass(`${element.type}-closed`);
+  $(`.${element.id}`).toggleClass(`closed`);
+});
+
+$(document).on('click', '.name', function() {
+  currentItem = $(this).data('element');
+});
+
