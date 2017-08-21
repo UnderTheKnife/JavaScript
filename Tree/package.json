@@ -1,0 +1,20 @@
+{
+  "name": "stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp serve"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "css-lint": "^1.0.1",
+    "csslint": "^1.0.5",
+    "gulp": "^3.9.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
